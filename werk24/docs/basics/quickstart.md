@@ -42,7 +42,7 @@ You will need to update the password through this link: [set password](https://w
 
     Do not replace any existing `.env` file; simply append its content.
 
-For more details see [Authentication](../basics/authentication)
+For more details see [Authentication](/docs/basics/authentication)
 
 ## Test the Client
 
@@ -55,4 +55,4 @@ After that you can submit the request by running
     w24cli techread "./your-file.pdf"
 
 If everything works correctly, you will now see one or more images of the individual cuts on your Technical Drawing.
-Have a look at the additional details at the [CLI Documentation](../cli/basic).
+Have a look at the additional details at the [CLI Documentation](/docs/cli/basic).

@@ -61,7 +61,7 @@ Defining your asks can be done as follows
         )
     ]
 
-For a full list of available asks, refer to [API/Asks](../api/asks)
+For a full list of available asks, refer to [API/Asks](/docs/api/asks)
 
 ## Submitting a Request
 

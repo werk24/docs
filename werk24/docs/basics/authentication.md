@@ -25,4 +25,3 @@ The file will look like this
     W24TECHREAD_VERSION="v1"
 
 The content of the file will be used when you call the `TechreadClient.make_from_env()` method.
-

@@ -1,6 +1,6 @@
 # Techread Subcommand
 
-The techread subcommand allows you to submit your Technical Drawing and ask Werk24 to return certain details about it. We call these details "asks". See [API/Asks](../api/asks) for a more detailed description. While the API allows you to define your asks in a more granular way, the CLI will always request each ask with its default attributes.
+The techread subcommand allows you to submit your Technical Drawing and ask Werk24 to return certain details about it. We call these details "asks". See [API/Asks](/docs/api/asks) for a more detailed description. While the API allows you to define your asks in a more granular way, the CLI will always request each ask with its default attributes.
 
 ## Available Commands
 
@@ -42,4 +42,4 @@ The sniplet below gives you an overview over the available commands. You can obt
 
 ## Ignore Architecture Status
 
-This flag deserves special attention. Before the CLI submits a reading request to the API, it checks whether the Architecture is available (See [Basics/Service-Times](/basics/service_times/)). If the Architecture is not available, it will stop the execution and yield a warning. As we understand that software developer's working hours do not necessarily overlap with the working hours of machine builders (think 5am shift start), we allow you to set the `-i` flag. This will still send the request to the Werk24 API and start processing it. You will still be able to receive the asks that do not require the GPU infrastructure: W24AskTechreadStarted, W24AskPageThumbnail, W24SheetThumbnail.
+This flag deserves special attention. Before the CLI submits a reading request to the API, it checks whether the Architecture is available (See [Basics/Service-Times](/docs/basics/service_times/)). If the Architecture is not available, it will stop the execution and yield a warning. As we understand that software developer's working hours do not necessarily overlap with the working hours of machine builders (think 5am shift start), we allow you to set the `-i` flag. This will still send the request to the Werk24 API and start processing it. You will still be able to receive the asks that do not require the GPU infrastructure: W24AskTechreadStarted, W24AskPageThumbnail, W24SheetThumbnail.

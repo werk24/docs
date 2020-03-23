@@ -11,4 +11,3 @@ Outside that these service times, you will be able to submit requests, but you w
 !!! note
 
     As this is purely a financial question, we'll be happy to extend these service times in accordance with your busines case
-
