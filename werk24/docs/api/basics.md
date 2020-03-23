@@ -9,12 +9,11 @@ The API is has three components that interact with each other:
 3. Techread Secure Websockets Client
 
 !!! note
-    If you need the ability to submit a techread request, but have no access to websockets (e.g., because your programming language does not provide easy access), let us know and we will provide a HTTPS-only API endpoint.
-
+If you need the ability to submit a techread request, but have no access to websockets (e.g., because your programming language does not provide easy access), let us know and we will provide a HTTPS-only API endpoint.
 
 ## Authentication Client
 
-The Authentication Client allows you to obtain a JWT Token from AWS Cognito (see [Basics/Authentication](/basics/authentication)). This Token needs to be added to each HTTPS and WSS request as `Authorization: Bearer ...`.
+The Authentication Client allows you to obtain a JWT Token from AWS Cognito (see [Basics/Authentication](../basics/authentication)). This Token needs to be added to each HTTPS and WSS request as `Authorization: Bearer ...`.
 Obtaining the Token is straight-foward, mainly because frameworks for many languages exist. See [Github/werk24/werk24/auth_client.py](https://github.com/werk24/werk24/blob/master/werk24/auth_client.py) for a python-based reference implementation.
 
 ## Techread HTTPS Client
@@ -35,4 +34,4 @@ The Techread WSS Client is used to:
 ## The Python Client
 
 To make your life as developer as easy as possible, we have implemented a reference client in python.
-See [API/TechreadClient](/api/techread-client) for details.
+See [API/TechreadClient](../api/techread-client) for details.

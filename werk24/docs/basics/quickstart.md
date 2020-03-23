@@ -4,9 +4,10 @@ Werk24 is designed to make your life as developer who want to handle Technical D
 
 Getting started with Werk24 follows a simple three step process
 
-1. [Install the Client](#install-the-client)
-2. [Configure the Client](#configure-the-client)
-3. [Test the Client](#test-the-client)
+- [Getting Started](#getting-started)
+  - [Install the Client](#install-the-client)
+  - [Configure the Client](#configure-the-client)
+  - [Test the Client](#test-the-client)
 
 ## Install the Client
 
@@ -41,7 +42,7 @@ You will need to update the password through this link: [set password](https://w
 
     Do not replace any existing `.env` file; simply append its content.
 
-For more details see [Authentication](/basics/authentication)
+For more details see [Authentication](../basics/authentication)
 
 ## Test the Client
 
@@ -54,4 +55,4 @@ After that you can submit the request by running
     w24cli techread "./your-file.pdf"
 
 If everything works correctly, you will now see one or more images of the individual cuts on your Technical Drawing.
-Have a look at the additional details at the [CLI Documentation](/cli/basic).
+Have a look at the additional details at the [CLI Documentation](../cli/basic).

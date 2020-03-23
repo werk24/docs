@@ -1,6 +1,6 @@
 # Techread Subcommand
 
-The techread subcommand allows you to submit your Technical Drawing and ask Werk24 to return certain details about it. We call these details "asks". See [API/Asks](/api/asks) for a more detailed description. While the API allows you to define your asks in a more granular way, the CLI will always request each ask with its default attributes.
+The techread subcommand allows you to submit your Technical Drawing and ask Werk24 to return certain details about it. We call these details "asks". See [API/Asks](../api/asks) for a more detailed description. While the API allows you to define your asks in a more granular way, the CLI will always request each ask with its default attributes.
 
 ## Available Commands
 
@@ -8,35 +8,37 @@ The sniplet below gives you an overview over the available commands. You can obt
 
     usage: w24cli techread [-h] [-i] [--ask-techread-started]
                        [--ask-page-thumbnail] [--ask-sheet-thumbnail]
-                       [--ask-drawing-thumbnail]
-                       [--ask-part-overall-dimensions] [--ask-train]
+                       [--ask-cut-thumbnail] [--ask-part-overall-dimensions]
+                       [--ask-train]
                        input_file
 
     positional arguments:
-    input_file              path to the file that is to be analyzed
+      input_file                path to the file that is to be analyzed
 
     optional arguments:
-    -h, --help              show this help message and exit
-    -i, --ignore-architecture-status
-                            flag indicating whether the architecture status should
-                            be ignored (i.e. whether the request should be sent
-                            even though the architecture is unavailable)
-    --ask-techread-started
-                            flag asking for a callback when the techread process
-                            has been picked up by a worker
-    --ask-page-thumbnail    flag asking for a thumbnail for each page in the
-                            document
-    --ask-sheet-thumbnail
-                            flag asking the thumbnail of each sheet in the
-                            document
-    --ask-drawing-thumbnail
-                            flag asking the thumbnail of each drawing of each
-                            sheet in the document
-    --ask-part-overall-dimensions
-                            flag asking the thumbnail of each drawing of each
-                            sheet in the document
-    --ask-train             flag asking the the API to use the document solely for
-                            training
+        -h, --help              show this help message and exit
+        -i, --ignore-architecture-status
+                                flag indicating whether the architecture status should
+                                be ignored (i.e. whether the request should be sent
+                                even though the architecture is unavailable)
+        --ask-techread-started
+                                ask for a callback when the techread process has been
+                                picked up by a worker
+        --ask-page-thumbnail    ask for a thumbnail for each page in the document
+        --ask-sheet-thumbnail
+                                ask for a thumbnail of each sheet in the document
+        --ask-cut-thumbnail     ask for a thumbnail of each cut of each sheet in the
+                                document
+        --ask-part-overall-dimensions
+                                ask for the overall dimensions of each part. The API
+                                will return the x,y,z dimensions as well as an enum
+                                indicating the shape
+        --ask-train             ask the the API to use the document solely for
+                                training. This is mainly used for internal purposes,
+                                but your are invited to submit additional files if you
+                                want to help us improve our system. Your will not be
+                                charged for these requests (but you'll also not get a
+                                response)
 
 ## Ignore Architecture Status
 
