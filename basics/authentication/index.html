@@ -1,0 +1,315 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="Werk24 Client and API documentation" name="description"/>
+<meta content="Dr. Jochen Mattes" name="author"/>
+<meta content="Copy to clipboard" name="lang:clipboard.copy"/>
+<meta content="Copied to clipboard" name="lang:clipboard.copied"/>
+<meta content="en" name="lang:search.language"/>
+<meta content="True" name="lang:search.pipeline.stopwords"/>
+<meta content="True" name="lang:search.pipeline.trimmer"/>
+<meta content="No matching documents" name="lang:search.result.none"/>
+<meta content="1 matching document" name="lang:search.result.one"/>
+<meta content="# matching documents" name="lang:search.result.other"/>
+<meta content="[\s\-]+" name="lang:search.tokenizer"/>
+<link href="../../assets/images/favicon.png" rel="shortcut icon"/>
+<meta content="mkdocs-1.1, mkdocs-material-4.6.3" name="generator"/>
+<title>Authentication - Werk24</title>
+<link href="../../assets/stylesheets/application.adb8469c.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/application-palette.a8b3c06d.css" rel="stylesheet"/>
+<meta content="#546e7a" name="theme-color"/>
+<script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+<link href="../../assets/fonts/material-icons.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="blue-grey" dir="ltr">
+<svg class="md-svg">
+<defs>
+</defs>
+</svg>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+<a class="md-skip" href="#authentication" tabindex="0">
+        Skip to content
+      </a>
+<header class="md-header" data-md-component="header">
+<nav class="md-header-nav md-grid">
+<div class="md-flex">
+<div class="md-flex__cell md-flex__cell--shrink">
+<a aria-label="Werk24" class="md-header-nav__button md-logo" href="../.." title="Werk24">
+<i class="md-icon"></i>
+</a>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+</div>
+<div class="md-flex__cell md-flex__cell--stretch">
+<div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+<span class="md-header-nav__topic">
+              Werk24
+            </span>
+<span class="md-header-nav__topic">
+              
+                Authentication
+              
+            </span>
+</div>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container">
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+        HOME
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../quickstart/">
+          BASICS
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../cli/basic/">
+          CLI
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../api/basics/">
+          API
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" role="main">
+<div class="md-main__inner md-grid" data-md-component="container">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title md-nav__title--site" for="__drawer">
+<a class="md-nav__button md-logo" href="../.." title="Werk24">
+<i class="md-icon"></i>
+</a>
+    Werk24
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../.." title="HOME">
+      HOME
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-2" id="nav-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-2">
+      BASICS
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+<label class="md-nav__title" for="nav-2">
+        BASICS
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../quickstart/" title="Getting Started">
+      Getting Started
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../service_times/" title="Service Times">
+      Service Times
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+        Authentication
+      </label>
+<a class="md-nav__link md-nav__link--active" href="./" title="Authentication">
+      Authentication
+    </a>
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#credentials-file">
+    Credentials File
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-3">
+      CLI
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+<label class="md-nav__title" for="nav-3">
+        CLI
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/basic/" title="Basic">
+      Basic
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/techread/" title="Techread">
+      Techread
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-4">
+      API
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+<label class="md-nav__title" for="nav-4">
+        API
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../api/basics/" title="Getting Started">
+      Getting Started
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../api/techread-client/" title="TechreadClient">
+      TechreadClient
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../api/asks/" title="Asks">
+      Asks
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#credentials-file">
+    Credentials File
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<h1 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">¶</a></h1>
+<p>Werk24 uses the <a href="https://aws.amazon.com/cognito/">AWS Cognito Service</a> to identify a user.
+We have decided to use on this service, mainly because it provides you with two advantages:</p>
+<ol>
+<li>
+<p>The source code that handles the authentication is constantly monitored and improved by a dedicated and highly-specialized team.</p>
+</li>
+<li>
+<p>Many standard libraries exist that handle the authentication process for you.</p>
+</li>
+<li>
+<p>We can provide you with diffent user names for different geographies, allowing you to ensure that your customer's data does not leave its region-of-origin. See <a href="https://en.wikipedia.org/wiki/General_Data_Protection_Regulation">General Data Protetion Regulation (GDPR)</a>.</p>
+</li>
+</ol>
+<h2 id="credentials-file">Credentials File<a class="headerlink" href="#credentials-file" title="Permanent link">¶</a></h2>
+<p>During the registration process, Werk24 will have provided you with an .env file that contains all the information that is required to authenticate with our API. This file assumes that you have only registered one user with Werk24.</p>
+<p>The file will look like this</p>
+<div class="codehilite"><pre><span></span><code>W24TECHREAD_AUTH_REGION="eu-central-1"
+W24TECHREAD_AUTH_CLIENT_ID="xxxxxxxxxxxxxxxxxxxxxxxxxx"
+W24TECHREAD_AUTH_CLIENT_SECRET="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+W24TECHREAD_AUTH_USERNAME="xx@xx.xx"
+W24TECHREAD_AUTH_PASSWORD="--- INSERT HERE ---"
+W24TECHREAD_SERVER_HTTPS="techread.w24.io"
+W24TECHREAD_SERVER_WSS="techread-ws.w24.io"
+W24TECHREAD_VERSION="v1"
+</code></pre></div>
+<p>The content of the file will be used when you call the <code>TechreadClient.make_from_env()</code> method.</p>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-nav">
+<nav class="md-footer-nav__inner md-grid">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../service_times/" rel="prev" title="Service Times">
+<div class="md-flex__cell md-flex__cell--shrink">
+<i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+</div>
+<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+<span class="md-flex__ellipsis">
+<span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Service Times
+              </span>
+</div>
+</a>
+<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../../cli/basic/" rel="next" title="Basic">
+<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+<span class="md-flex__ellipsis">
+<span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Basic
+              </span>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+</div>
+</a>
+</nav>
+</div>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+<div class="md-footer-copyright__highlight">
+            Copyright © 2020 Werk24
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org" rel="noopener" target="_blank">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="../../assets/javascripts/application.c33a9706.js"></script>
+<script>app.initialize({version:"1.1",url:{base:"../.."}})</script>
+<script src="https://unpkg.com/mermaid@8.4.8/dist/mermaid.core.js"></script>
+</body>
+</html>
