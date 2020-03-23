@@ -240,7 +240,7 @@
 <div class="md-content">
 <article class="md-content__inner md-typeset">
 <h1 id="techread-subcommand">Techread Subcommand<a class="headerlink" href="#techread-subcommand" title="Permanent link">¶</a></h1>
-<p>The techread subcommand allows you to submit your Technical Drawing and ask Werk24 to return certain details about it. We call these details "asks". See <a href="../api/asks">API/Asks</a> for a more detailed description. While the API allows you to define your asks in a more granular way, the CLI will always request each ask with its default attributes.</p>
+<p>The techread subcommand allows you to submit your Technical Drawing and ask Werk24 to return certain details about it. We call these details "asks". See <a href="/docs/api/asks">API/Asks</a> for a more detailed description. While the API allows you to define your asks in a more granular way, the CLI will always request each ask with its default attributes.</p>
 <h2 id="available-commands">Available Commands<a class="headerlink" href="#available-commands" title="Permanent link">¶</a></h2>
 <p>The sniplet below gives you an overview over the available commands. You can obtain the same output by calling <code>w24cli techread --help</code>.</p>
 <div class="codehilite"><pre><span></span><code>usage: w24cli techread [-h] [-i] [--ask-techread-started]
@@ -278,7 +278,7 @@ optional arguments:
                             response)
 </code></pre></div>
 <h2 id="ignore-architecture-status">Ignore Architecture Status<a class="headerlink" href="#ignore-architecture-status" title="Permanent link">¶</a></h2>
-<p>This flag deserves special attention. Before the CLI submits a reading request to the API, it checks whether the Architecture is available (See <a href="/basics/service_times/">Basics/Service-Times</a>). If the Architecture is not available, it will stop the execution and yield a warning. As we understand that software developer's working hours do not necessarily overlap with the working hours of machine builders (think 5am shift start), we allow you to set the <code>-i</code> flag. This will still send the request to the Werk24 API and start processing it. You will still be able to receive the asks that do not require the GPU infrastructure: W24AskTechreadStarted, W24AskPageThumbnail, W24SheetThumbnail.</p>
+<p>This flag deserves special attention. Before the CLI submits a reading request to the API, it checks whether the Architecture is available (See <a href="/docs/basics/service_times/">Basics/Service-Times</a>). If the Architecture is not available, it will stop the execution and yield a warning. As we understand that software developer's working hours do not necessarily overlap with the working hours of machine builders (think 5am shift start), we allow you to set the <code>-i</code> flag. This will still send the request to the Werk24 API and start processing it. You will still be able to receive the asks that do not require the GPU infrastructure: W24AskTechreadStarted, W24AskPageThumbnail, W24SheetThumbnail.</p>
 </article>
 </div>
 </div>
