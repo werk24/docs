@@ -283,12 +283,12 @@
 <p>The Techread Client is a python-based reference implementation to illustrate the communication with the werk24 API. It is actively maintained and will be the lead-implementation for all our development efforts. That means that new features will become available here first.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>Downward compatability is very important to us, and we take due care to announce breaking changes with adequate notice. Still, we urge you to implement your own integration tests!</p>
 </div>
+<p>Downward compatability is very important to us, and we take due care to announce breaking changes with adequate notice. Still, we urge you to implement your own integration tests!</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Should you be interested in a client for a different language, please get in touch with us.</p>
 </div>
+<p>Should you be interested in a client for a different language, please get in touch with us.</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">¶</a></h2>
 <p>Werk24 provides an easy-to-use and easy-to-extend Python-based client.
 Install our Python Client using <a href="https://pip.pypa.io/en/stable/">pip</a>:</p>
@@ -305,8 +305,8 @@ git+https://git@github.com/werk24/werk24-python.git@master#egg=werk24
 </code></pre></div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>Use the <code>dotenv-python</code> package, not the <code>dotenv</code></p>
 </div>
+<p>Use the <code>dotenv-python</code> package, not the <code>dotenv</code></p>
 <p>Once you have the dotenv package installed, you can easily load the environment variables like so:</p>
 <div class="codehilite"><pre><span></span><code>from dotenv load_dotenv
 load_dotenv()
@@ -332,7 +332,7 @@ hooks = [
     )
 ]
 </code></pre></div>
-<p>For a full list of available asks, refer to <a href="/api/asks">API/Asks</a></p>
+<p>For a full list of available asks, refer to <a href="../api/asks">API/Asks</a></p>
 <h2 id="submitting-a-request">Submitting a Request<a class="headerlink" href="#submitting-a-request" title="Permanent link">¶</a></h2>
 <p>Submitting a request requires you to start a session and submit both, a technical drawing (as bytes) and a list of hooks</p>
 <div class="codehilite"><pre><span></span><code>async with client as session
@@ -346,8 +346,8 @@ hooks = [
 </code></pre></div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>Be sure to call the sniplet asyncinously (see Full Example)</p>
 </div>
+<p>Be sure to call the sniplet asyncinously (see Full Example)</p>
 <h2 id="full-example">Full Example<a class="headerlink" href="#full-example" title="Permanent link">¶</a></h2>
 <p>Combining all parts from above.</p>
 <div class="codehilite"><pre><span></span><code>import asyncio

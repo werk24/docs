@@ -252,11 +252,12 @@
 <h1 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">¶</a></h1>
 <p>Werk24 is designed to make your life as developer who want to handle Technical Drawings as simple and convenient as possible. If you have never used Werk24 before, this tutorial helps you getting started.</p>
 <p>Getting started with Werk24 follows a simple three step process</p>
-<ol>
+<ul>
+<li><a href="#getting-started">Getting Started</a></li>
 <li><a href="#install-the-client">Install the Client</a></li>
 <li><a href="#configure-the-client">Configure the Client</a></li>
 <li><a href="#test-the-client">Test the Client</a></li>
-</ol>
+</ul>
 <h2 id="install-the-client">Install the Client<a class="headerlink" href="#install-the-client" title="Permanent link">¶</a></h2>
 <p>Werk24 provides an easy-to-use and easy-to-extend Python-based client.
 Install our Python Client using <a href="https://pip.pypa.io/en/stable/">pip</a>:</p>
@@ -285,7 +286,7 @@ You will need to update the password through this link: <a href="https://w24io.a
 <p class="admonition-title">Note</p>
 <p>Do not replace any existing <code>.env</code> file; simply append its content.</p>
 </div>
-<p>For more details see <a href="/basics/authentication">Authentication</a></p>
+<p>For more details see <a href="../basics/authentication">Authentication</a></p>
 <h2 id="test-the-client">Test the Client<a class="headerlink" href="#test-the-client" title="Permanent link">¶</a></h2>
 <p>You can check whether client is installed and configured correctly by submitting a simple Techread request through the CLI. The request submits a technical drawing of your chose to the API and returns a thumbnail of the individual cuts. To be able to see the image, ensure that you have the <a href="https://python-pillow.org">Pillow</a> package installed.</p>
 <div class="codehilite"><pre><span></span><code>pip install Pillow
@@ -294,7 +295,7 @@ You will need to update the password through this link: <a href="https://w24io.a
 <div class="codehilite"><pre><span></span><code>w24cli techread "./your-file.pdf"
 </code></pre></div>
 <p>If everything works correctly, you will now see one or more images of the individual cuts on your Technical Drawing.
-Have a look at the additional details at the <a href="/cli/basic">CLI Documentation</a>.</p>
+Have a look at the additional details at the <a href="../cli/basic">CLI Documentation</a>.</p>
 </article>
 </div>
 </div>
