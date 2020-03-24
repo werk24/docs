@@ -220,6 +220,30 @@
     Full Example
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#further-pointers">
+    Further Pointers
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#authentication-client">
+    Authentication Client
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#techread-https-client">
+    Techread HTTPS Client
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#techread-wss-client">
+    Techread WSS Client
+  </a>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </li>
@@ -272,6 +296,30 @@
     Full Example
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#further-pointers">
+    Further Pointers
+  </a>
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#authentication-client">
+    Authentication Client
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#techread-https-client">
+    Techread HTTPS Client
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#techread-wss-client">
+    Techread WSS Client
+  </a>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </div>
@@ -281,20 +329,12 @@
 <article class="md-content__inner md-typeset">
 <h1 id="techreadclient">TechreadClient<a class="headerlink" href="#techreadclient" title="Permanent link">¶</a></h1>
 <p>The Techread Client is a python-based reference implementation to illustrate the communication with the werk24 API. It is actively maintained and will be the lead-implementation for all our development efforts. That means that new features will become available here first.</p>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-</div>
-<p>Downward compatability is very important to us, and we take due care to announce breaking changes with adequate notice. Still, we urge you to implement your own integration tests!</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-</div>
-<p>Should you be interested in a client for a different language, please get in touch with us.</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">¶</a></h2>
 <p>Werk24 provides an easy-to-use and easy-to-extend Python-based client.
 Install our Python Client using <a href="https://pip.pypa.io/en/stable/">pip</a>:</p>
 <div class="codehilite"><pre><span></span><code>pip install git+https://git@github.com/werk24/werk24-python.git@master#egg=werk24
 </code></pre></div>
-<p>You can also add this URL directly into your <code>requirements.txt</code>.</p>
+<p>You can also add this URL directly into your <code>requirements.txt</code> .</p>
 <div class="codehilite"><pre><span></span><code>...
 git+https://git@github.com/werk24/werk24-python.git@master#egg=werk24
 ...
@@ -306,7 +346,7 @@ git+https://git@github.com/werk24/werk24-python.git@master#egg=werk24
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 </div>
-<p>Use the <code>dotenv-python</code> package, not the <code>dotenv</code></p>
+<p>Use the <code>dotenv-python</code> package, not the <code>dotenv</code> </p>
 <p>Once you have the dotenv package installed, you can easily load the environment variables like so:</p>
 <div class="codehilite"><pre><span></span><code>from dotenv load_dotenv
 load_dotenv()
@@ -317,17 +357,17 @@ load_dotenv()
 client = W24TechreadClient.make_from_env()
 </code></pre></div>
 <h2 id="defining-your-asks">Defining your asks<a class="headerlink" href="#defining-your-asks" title="Permanent link">¶</a></h2>
-<p>We understand that time is of utter importance when the customer is waiting for a response. To make sure that you can keep your customer entertained, we make the results available as soon as possible. The result is a continuous flow of information, that you can "subscribe" to.</p>
+<p>We understand that time is of utter importance when the customer is waiting for a response. To make sure that you can keep your customer entertained, we make the results available as soon as possible. The result is a continuous flow of information, that you can "subscribe" to. See <a href="/docs/api/asks">API/Asks</a> for details.</p>
 <p>To make your life as developer as easy as possible, we introduced a small <code>Hook</code> object that allows you to define</p>
 <ol>
 <li>The ask, and</li>
 <li>What function to call one the ask becomes available</li>
 </ol>
 <p>Defining your asks can be done as follows</p>
-<div class="codehilite"><pre><span></span><code>from werk24 import Hook,W24AskPartOverallDimensions
+<div class="codehilite"><pre><span></span><code>from werk24 import Hook,W24AskVariantOverallDimensions
 hooks = [
     Hook(
-        ask=W24AskPartOverallDimensions(),
+        ask=W24AskVariantOverallDimensions(),
         function=lambda: msg: print(msg)
     )
 ]
@@ -346,35 +386,70 @@ hooks = [
 </code></pre></div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-</div>
 <p>Be sure to call the sniplet asyncinously (see Full Example)</p>
+</div>
 <h2 id="full-example">Full Example<a class="headerlink" href="#full-example" title="Permanent link">¶</a></h2>
 <p>Combining all parts from above.</p>
-<div class="codehilite"><pre><span></span><code>import asyncio
-from werk24 import W24TechreadClient, W24AskPartOverallDimensions, Hook
+<div class="codehilite"><pre><span></span><code>import sys
 
-async def main():
+import asyncio
+
+from werk24 import W24TechreadClient, W24AskVariantOverallDimensions, Hook
+
+async def main(drawing_path:str) -&gt; None:
+
+    # get the drawing
+    with open(drawing_path, "rb") as drawing_handle
+        drawing_bytes = drawing_handle.read()
+
+    # define the hooks
     hooks = [
         Hook(
-            ask=W24AskPartOverallDimensions(),
+            ask=W24AskVariantOverallDimensions(),
             function=lambda: msg: print(msg)
-        )
-    ]
+            )
+        ]
 
+    # make the session and start the reading process
     client = W24TechreadClient.make_from_env()
     async with client as session
-
-        drawing_path = ...
-        drawing_bytes = open(drawing_path, "rb").read()
-
         session.read_drawing_with_hooks(
             drawing_bytes,
             hooks)
 
 if  __name__ == "__main__":
-    asyncio.run(main())
+    try:
+        drawing_path = sys.argv[1]
+
+    except KeyError:
+        sys.exit("Drawing Path Required as first argument")
+
+    asyncio.run(main(drawing_path))
 </code></pre></div>
 <p>And voilà, you should now see the overall dimensions of all parts printed on bash.</p>
+<h2 id="further-pointers">Further Pointers<a class="headerlink" href="#further-pointers" title="Permanent link">¶</a></h2>
+<p>In case you plan to implement your own client, have a look at the structure of the Python client.
+It has three "Sublclients" that deal with the different kind of endpoints.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Please talk to us before you start implementing a client in a different language. We will definately do the peer review and would love to co-author the client to make the client available to other customers. Still, please understand that we do not speak all languages and that you'll need to be in the lead to develop that COBOL-Client (seems to be possible by the way).</p>
+</div>
+<h3 id="authentication-client">Authentication Client<a class="headerlink" href="#authentication-client" title="Permanent link">¶</a></h3>
+<p>The Authentication Client allows you to obtain a JWT Token from AWS Cognito (see <a href="/docs/basics/authentication">Basics/Authentication</a>). This Token needs to be added to each HTTPS and WSS request as <code>Authorization: Bearer ...</code> .
+Obtaining the Token is straight-foward, mainly because frameworks for many languages exist. See <a href="https://github.com/werk24/werk24/blob/master/werk24/auth_client.py">Github/werk24/werk24-python/auth_client.py</a> for a python-based reference implementation.</p>
+<h3 id="techread-https-client">Techread HTTPS Client<a class="headerlink" href="#techread-https-client" title="Permanent link">¶</a></h3>
+<p>The Techread HTTPS Client is used to</p>
+<ol>
+<li>Upload Technical Drawings</li>
+<li>Upload Models</li>
+<li>Download binary Ask Responses</li>
+</ol>
+<h3 id="techread-wss-client">Techread WSS Client<a class="headerlink" href="#techread-wss-client" title="Permanent link">¶</a></h3>
+<p>The Techread WSS Client is used to:</p>
+<ol>
+<li>Initiate a Request</li>
+<li>Listen to Responses in "near-real-time"</li>
+</ol>
 </article>
 </div>
 </div>
