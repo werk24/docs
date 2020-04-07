@@ -318,7 +318,7 @@ Install our Python Client using <a href="https://pip.pypa.io/en/stable/">pip</a>
 </div>
 <h2 id="configure-the-client">Configure the Client<a class="headerlink" href="#configure-the-client" title="Permanent link">¶</a></h2>
 <p>After you completed downloading and installing the Werk24 client, you'll need to provide the access information.
-During the registration process we will have provided you with a <code>.env</code> file, that contains your access information.
+During the registration process we will have provided you with a <code>.werk24</code> file, that contains your access information.
 It will look similar to this:</p>
 <div class="codehilite"><pre><span></span><code>W24TECHREAD_AUTH_REGION="eu-central-1"
 W24TECHREAD_AUTH_CLIENT_ID="xxxxxxxxxxxxxxxxxxxxxxxxxx"
@@ -333,7 +333,7 @@ W24TECHREAD_VERSION="v1"
 You will need to update the password through this link: <a href="https://w24io.auth.eu-central-1.amazoncognito.com/login?client_id=2ksl69eldrro9ud0cbn2sspo2o&amp;response_type=code&amp;scope=email+openid&amp;redirect_uri=https://www.werk24.biz">set password</a> before you will be able to access the API. Replace the <code>--- INSERT HERE ---</code> line with your password and store the file in the base path of your project.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Do not replace any existing <code>.env</code> file; simply append its content.</p>
+<p>Do not replace any existing <code>.werk24</code> file; simply append its content.</p>
 </div>
 <p>For more details see <a href="/docs/basics/authentication">Authentication</a></p>
 <h2 id="test-the-client">Test the Client<a class="headerlink" href="#test-the-client" title="Permanent link">¶</a></h2>
