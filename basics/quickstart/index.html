@@ -201,11 +201,6 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../service_times/" title="Service Times">
-      Service Times
-    </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../authentication/" title="Authentication">
       Authentication
     </a>
@@ -256,9 +251,37 @@
       TechreadClient
     </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../api/asks/" title="Asks">
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-4">
       Asks
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+<label class="md-nav__title" for="nav-4">
+        Asks
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../asks/basics/" title="Basics">
+      Basics
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../asks/page/" title="Pages and Sheets">
+      Pages and Sheets
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../asks/sectional/" title="Sectionals">
+      Sectionals
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../asks/variant/" title="Variants and Measures">
+      Variants and Measures
     </a>
 </li>
 </ul>
@@ -299,27 +322,32 @@
 <article class="md-content__inner md-typeset">
 <a class="md-icon md-content__icon" href="https://github.com/werk24/edit/master/docs/basics/quickstart.md" title="Edit this page"></a>
 <h1 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">¶</a></h1>
-<p>Werk24 is designed to make your life as developer who want to handle Technical Drawings as simple and convenient as possible. If you have never used Werk24 before, this tutorial helps you getting started.</p>
-<p>Getting started with Werk24 follows a simple three step process</p>
+<p>Werk24 is designed to make your life with handling Technical Drawings as convenient as possible.
+This Tutorial will get you set up.</p>
+<p>We will:</p>
 <ul>
-<li><a href="#getting-started">Getting Started</a></li>
 <li><a href="#install-the-client">Install the Client</a></li>
-<li><a href="#configure-the-client">Configure the Client</a></li>
+<li><a href="#configure-the-client">Store the Credentials</a></li>
 <li><a href="#test-the-client">Test the Client</a></li>
 </ul>
 <h2 id="install-the-client">Install the Client<a class="headerlink" href="#install-the-client" title="Permanent link">¶</a></h2>
 <p>Werk24 provides an easy-to-use and easy-to-extend Python-based client.
 Install our Python Client using <a href="https://pip.pypa.io/en/stable/">pip</a>:</p>
-<div class="codehilite"><pre><span></span><code>pip install git+https://github.com/werk24/werk24-python.git@master#egg=werk24
+<div class="codehilite"><pre><span></span><code>pip install werk24
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Should you be interested in a client for a different language, please get in touch with us.</p>
+<p>Should you be interested in a Client for a different language, please get in touch with us at info@werk24.biz.</p>
 </div>
 <h2 id="configure-the-client">Configure the Client<a class="headerlink" href="#configure-the-client" title="Permanent link">¶</a></h2>
-<p>After you completed downloading and installing the Werk24 client, you'll need to provide the access information.
-During the registration process we will have provided you with a <code>.werk24</code> file, that contains your access information.
-It will look similar to this:</p>
+<p>The Client uses <a href="https://aws.amazon.com/cognito/">AWS Cognito</a> to handle Authentication.
+This has several advantages:</p>
+<ul>
+<li>Security updates are handled by a dedicated team</li>
+<li>Standard libraries are available for a large range of languages</li>
+<li>You will be able to maintain individual accounts for your own customers.</li>
+</ul>
+<p>During the registration process we provide you with a <code>.werk24</code> file, that contains all the information that you will need. It will look similar to this:</p>
 <div class="codehilite"><pre><span></span><code>W24TECHREAD_AUTH_REGION="eu-central-1"
 W24TECHREAD_AUTH_CLIENT_ID="xxxxxxxxxxxxxxxxxxxxxxxxxx"
 W24TECHREAD_AUTH_CLIENT_SECRET="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
@@ -329,21 +357,25 @@ W24TECHREAD_SERVER_HTTPS="techread.w24.io"
 W24TECHREAD_SERVER_WSS="techread-ws.w24.io"
 W24TECHREAD_VERSION="v1"
 </code></pre></div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <p>In the welcome email we will also have provided you with a temporary password for your application.
-You will need to update the password through this link: <a href="https://w24io.auth.eu-central-1.amazoncognito.com/login?client_id=2ksl69eldrro9ud0cbn2sspo2o&amp;response_type=code&amp;scope=email+openid&amp;redirect_uri=https://www.werk24.biz">set password</a> before you will be able to access the API. Replace the <code>--- INSERT HERE ---</code> line with your password and store the file in the base path of your project.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Do not replace any existing <code>.werk24</code> file; simply append its content.</p>
+You will need to update the password through this link <a href="https://w24io.auth.eu-central-1.amazoncognito.com/login?client_id=2ksl69eldrro9ud0cbn2sspo2o&amp;response_type=code&amp;scope=email+openid&amp;redirect_uri=https://www.werk24.biz">- set password -</a> before you will be able to access the API. Replace the <code>--- INSERT HERE ---</code> line with your password and store the file in the base path of your project.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Add <code>.werk24</code> to your .gitignore file to ensure that the credentials remain stored locally.
+Alternatively you can also store the credentials as ENVIRONMENT VARIABLES.</p>
 </div>
 <p>For more details see <a href="/docs/basics/authentication">Authentication</a></p>
 <h2 id="test-the-client">Test the Client<a class="headerlink" href="#test-the-client" title="Permanent link">¶</a></h2>
-<p>You can check whether client is installed and configured correctly by submitting a simple Techread request through the CLI. The request submits a technical drawing of your chose to the API and returns a thumbnail of the individual cuts. To be able to see the image, ensure that you have the <a href="https://python-pillow.org">Pillow</a> package installed.</p>
+<p>You can check whether client is installed and configured correctly by submitting a simple Techread request through the CLI. The request submits the technical drawing to the API and returns a thumbnail of the individual sectionals. To be able to see the image, ensure that you have the <a href="https://python-pillow.org">Pillow</a> package installed.</p>
 <div class="codehilite"><pre><span></span><code>pip install Pillow
 </code></pre></div>
 <p>After that you can submit the request by running</p>
 <div class="codehilite"><pre><span></span><code>w24cli techread --ask-page-thumbnail ./your-file.pdf
 </code></pre></div>
-<p>If everything works correctly, you will now see one or more images of the individual cuts on your Technical Drawing.
+<p>You should now see one or more images of the individual cuts on your Technical Drawing.
 Have a look at the additional details at the <a href="/docs/cli/basic">CLI Documentation</a>.</p>
 </article>
 </div>
@@ -365,13 +397,13 @@ Have a look at the additional details at the <a href="/docs/cli/basic">CLI Docum
               </span>
 </div>
 </a>
-<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../service_times/" rel="next" title="Service Times">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../authentication/" rel="next" title="Authentication">
 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
 <span class="md-flex__ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Service Times
+                Authentication
               </span>
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">

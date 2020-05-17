@@ -177,11 +177,6 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../basics/service_times/" title="Service Times">
-      Service Times
-    </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../../basics/authentication/" title="Authentication">
       Authentication
     </a>
@@ -220,11 +215,6 @@
     Available Commands
   </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ignore-architecture-status">
-    Ignore Architecture Status
-  </a>
-</li>
 </ul>
 </nav>
 </li>
@@ -251,9 +241,37 @@
       TechreadClient
     </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../api/asks/" title="Asks">
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-4">
       Asks
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+<label class="md-nav__title" for="nav-4">
+        Asks
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../asks/basics/" title="Basics">
+      Basics
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../asks/page/" title="Pages and Sheets">
+      Pages and Sheets
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../asks/sectional/" title="Sectionals">
+      Sectionals
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../asks/variant/" title="Variants and Measures">
+      Variants and Measures
     </a>
 </li>
 </ul>
@@ -273,11 +291,6 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#available-commands">
     Available Commands
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ignore-architecture-status">
-    Ignore Architecture Status
   </a>
 </li>
 </ul>
@@ -303,10 +316,6 @@ positional arguments:
 
 optional arguments:
   -h, --help            show this help message and exit
-  -i, --ignore-architecture-status
-                        flag indicating whether the architecture status should
-                        be ignored(i.e. whether the request should be sent
-                        even though the architecture is unavailable)
   --ask-techread-started
                         ask for a callback when the techread process has been
                         picked up by a worker
@@ -316,10 +325,6 @@ optional arguments:
   --ask-plane-thumbnail
                         ask for a thumbnail of each plane of each sheet in the
                         document
-  --ask-variant-overall-dimensions
-                        ask for the overall dimensions of each variant. The
-                        API will return the x,y,z dimensions as well as an
-                        enum indicating the shape
   --ask-train           ask the the API to use the document solely for
                         training. This is mainly used for internal purposes,
                         but your are invited to submit additional files if you
@@ -327,8 +332,6 @@ optional arguments:
                         charged for these requests (but you'll also not get a
                         response)
 </code></pre></div>
-<h2 id="ignore-architecture-status">Ignore Architecture Status<a class="headerlink" href="#ignore-architecture-status" title="Permanent link">¶</a></h2>
-<p>This flag deserves special attention. Before the CLI submits a reading request to the API, it checks whether the Architecture is available (See <a href="/docs/basics/service_times/">Basics/Service-Times</a>). If the Architecture is not available, it will stop the execution and yield a warning. As we understand that software developer's working hours do not necessarily overlap with the working hours of machine builders (think 5am shift start), we allow you to set the <code>-i</code> flag. This will still send the request to the Werk24 API and start processing it. You will still be able to receive the asks that do not require the GPU infrastructure: W24AskTechreadStarted, W24AskPageThumbnail, W24SheetThumbnail.</p>
 </article>
 </div>
 </div>

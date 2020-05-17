@@ -177,11 +177,6 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../basics/service_times/" title="Service Times">
-      Service Times
-    </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../../basics/authentication/" title="Authentication">
       Authentication
     </a>
@@ -239,23 +234,18 @@
 <label class="md-nav__title" for="__toc">Table of contents</label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#installation">
-    Installation
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#setting-up-the-environment">
-    Setting up the environment
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#initiating-the-client">
     Initiating the Client
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#defining-your-asks">
-    Defining your asks
+<a class="md-nav__link" href="#the-ask-concept">
+    The Ask Concept
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#defining-hooks">
+    Defining Hooks
   </a>
 </li>
 <li class="md-nav__item">
@@ -295,9 +285,37 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../asks/" title="Asks">
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-4">
       Asks
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+<label class="md-nav__title" for="nav-4">
+        Asks
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../asks/basics/" title="Basics">
+      Basics
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../asks/page/" title="Pages and Sheets">
+      Pages and Sheets
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../asks/sectional/" title="Sectionals">
+      Sectionals
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../asks/variant/" title="Variants and Measures">
+      Variants and Measures
     </a>
 </li>
 </ul>
@@ -315,23 +333,18 @@
 <label class="md-nav__title" for="__toc">Table of contents</label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#installation">
-    Installation
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#setting-up-the-environment">
-    Setting up the environment
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#initiating-the-client">
     Initiating the Client
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#defining-your-asks">
-    Defining your asks
+<a class="md-nav__link" href="#the-ask-concept">
+    The Ask Concept
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#defining-hooks">
+    Defining Hooks
   </a>
 </li>
 <li class="md-nav__item">
@@ -377,58 +390,55 @@
 <article class="md-content__inner md-typeset">
 <a class="md-icon md-content__icon" href="https://github.com/werk24/edit/master/docs/api/techread-client.md" title="Edit this page"></a>
 <h1 id="techreadclient">TechreadClient<a class="headerlink" href="#techreadclient" title="Permanent link">¶</a></h1>
-<p>The Techread Client is a python-based reference implementation to illustrate the communication with the werk24 API. It is actively maintained and will be the lead-implementation for all our development efforts. That means that new features will become available here first.</p>
-<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">¶</a></h2>
-<p>Werk24 provides an easy-to-use and easy-to-extend Python-based client.
-Install our Python Client using <a href="https://pip.pypa.io/en/stable/">pip</a>:</p>
-<div class="codehilite"><pre><span></span><code>pip install git+https://git@github.com/werk24/werk24-python.git@master#egg=werk24
-</code></pre></div>
-<p>You can also add this URL directly into your <code>requirements.txt</code> .</p>
-<div class="codehilite"><pre><span></span><code>...
-git+https://git@github.com/werk24/werk24-python.git@master#egg=werk24
-...
-</code></pre></div>
-<h2 id="setting-up-the-environment">Setting up the environment<a class="headerlink" href="#setting-up-the-environment" title="Permanent link">¶</a></h2>
-<p>During the registration process, we will have provided you with a <code>.werk24</code> file that contains all the necessary authentication details and environment variables. You can either set these variables in you environment manually, or load it with the <a href="https://github.com/theskumar/python-dotenv">dotenv Package</a>.</p>
-<div class="codehilite"><pre><span></span><code>pip install dotenv-python
-</code></pre></div>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Use the <code>dotenv-python</code> package, not the <code>dotenv</code></p>
-</div>
-<p>Once you have the dotenv package installed, you can easily load the environment variables like so:</p>
-<div class="codehilite"><pre><span></span><code>from dotenv load_dotenv
-load_dotenv()
-</code></pre></div>
+<p>The Techread Client is a python-based reference implementation to illustrate the communication with the werk24 API. It is actively maintained and will be the lead-implementation for all our development efforts.</p>
 <h2 id="initiating-the-client">Initiating the Client<a class="headerlink" href="#initiating-the-client" title="Permanent link">¶</a></h2>
-<p>You can start a new Techread client with two lines. This will create a new client from the environment variables.</p>
+<p>You can make a new Techread client in two lines of code.</p>
 <div class="codehilite"><pre><span></span><code>from werk24 import W24TechreadClient
 client = W24TechreadClient.make_from_env()
 </code></pre></div>
-<h2 id="defining-your-asks">Defining your asks<a class="headerlink" href="#defining-your-asks" title="Permanent link">¶</a></h2>
-<p>We understand that time is of utter importance when the customer is waiting for a response. To make sure that you can keep your customer entertained, we make the results available as soon as possible. The result is a continuous flow of information, that you can "subscribe" to. See <a href="/docs/api/asks">API/Asks</a> for details.</p>
+<p>This will create a new client from the environment variables. The client will look for the credentials in the <code>.werk24</code> file in your working directory. If the file cannot be found, the Client falls back to the information it can obtain from the <code>ENVIRONMENT VARIABLES</code> .</p>
+<h2 id="the-ask-concept">The Ask Concept<a class="headerlink" href="#the-ask-concept" title="Permanent link">¶</a></h2>
+<p>We understand that the individual use-cases can vary largely. Take these two extremes:</p>
+<ol>
+<li>Application 1 runs a batch job to obtain thumbnails of the main sectional on a Technical Drawing.</li>
+<li>Application 2 wants to derive the minimal tolerances on an A0 Technical drawing to inform the live-pricing engine. The user remains online and wants to be entertained while she is waiting for the price assessment.</li>
+</ol>
+<p>To serve both applications with the same API, we have introduced the concept "Ask", which allows you to define very precicely what you want to learn about the Technical Drawing. Each "Ask" then triggers a response as soon as the information becomes available.</p>
+<p>To come back to our application:</p>
+<ol>
+<li>
+<p>Applciation 1 would submit only one Ask:</p>
+<ul>
+<li>W24AskSectionalThumbnail()</li>
+</ul>
+</li>
+<li>
+<p>Application 2 would submit multiple Asks</p>
+<ul>
+<li>W24AskSheetThumbnail() -- gives the user an overview over the complete sheet</li>
+<li>W24AskSectionalThumbail() -- shows to the user that the individual sectionals have been separated correctly</li>
+<li>W24AskVariantMeasures() -- delivers the complete information about the Measures (incl. tolerances)</li>
+</ul>
+</li>
+</ol>
+<p>See <a href="/docs/api/asks">API/Asks</a> for details.</p>
+<h2 id="defining-hooks">Defining Hooks<a class="headerlink" href="#defining-hooks" title="Permanent link">¶</a></h2>
 <p>To make your life as developer as easy as possible, we introduced a small <code>Hook</code> object that allows you to define</p>
 <ol>
-<li>The ask, and</li>
-<li>What function to call one the ask becomes available</li>
+<li>The Ask, and</li>
+<li>What function should be called when the Ask is answered</li>
 </ol>
-<p>Defining your asks can be done as follows</p>
-<div class="codehilite"><pre><span></span><code>from werk24 import Hook,W24AskVariantOverallDimensions
-hooks = [
-    Hook(
-        ask=W24AskVariantOverallDimensions(),
-        function=lambda: msg: print(msg)
-    )
-]
+<p>The defintion is very simple:</p>
+<div class="codehilite"><pre><span></span><code>from werk24 import Hook,W24AskVariantMeasures
+hooks = [Hook(ask=W24AskVariantMeasures(), function=print)]
 </code></pre></div>
 <p>For a full list of available asks, refer to <a href="/docs/api/asks">API/Asks</a></p>
 <h2 id="submitting-a-request">Submitting a Request<a class="headerlink" href="#submitting-a-request" title="Permanent link">¶</a></h2>
-<p>Submitting a request requires you to start a session and submit both, a technical drawing (as bytes) and a list of hooks</p>
-<div class="codehilite"><pre><span></span><code>async with client as session
+<p>Submitting a request requires you to start a session and submit both, a Technical Drawing (as bytes) and a list of hooks</p>
+<div class="codehilite"><pre><span></span><code>drawing_path = ...
+drawing_bytes = open(drawing_path, "rb").read()
 
-    drawing_path = ...
-    drawing_bytes = open(drawing_path, "rb").read()
-
+async with client as session
     session.read_drawing_with_hooks(
         drawing_bytes,
         hooks)
@@ -438,33 +448,26 @@ hooks = [
 <p>Be sure to call the sniplet asyncinously (see Full Example)</p>
 </div>
 <h2 id="full-example">Full Example<a class="headerlink" href="#full-example" title="Permanent link">¶</a></h2>
-<p>Combining all parts from above.</p>
+<p>Combining all parts from above, we arrive at the full example. When you call the script with the path to a Technical Drawing as first argument, you should shortly after see the measures that were detected on the
+Drawing. Be aware that the API will return a response for each sectional that was found on the Canvas.
+If your Document contains 2 Pages with 2 Sectionals each, you will receive 4 responses.</p>
 <div class="codehilite"><pre><span></span><code>import sys
-
 import asyncio
-
 from werk24 import W24TechreadClient, W24AskVariantOverallDimensions, Hook
+
+# get the drawing
+with open(drawing_path, "rb") as drawing_handle
+    drawing_bytes = drawing_handle.read()
 
 async def main(drawing_path:str) -&gt; None:
 
-    # get the drawing
-    with open(drawing_path, "rb") as drawing_handle
-        drawing_bytes = drawing_handle.read()
-
     # define the hooks
-    hooks = [
-        Hook(
-            ask=W24AskVariantOverallDimensions(),
-            function=lambda: msg: print(msg)
-            )
-        ]
+    hooks = [Hook(ask=W24AskVariantOverallDimensions(),function=print)]
 
     # make the session and start the reading process
     client = W24TechreadClient.make_from_env()
     async with client as session
-        session.read_drawing_with_hooks(
-            drawing_bytes,
-            hooks)
+        session.read_drawing_with_hooks(drawing_bytes, hooks)
 
 if  __name__ == "__main__":
     try:
@@ -475,13 +478,12 @@ if  __name__ == "__main__":
 
     asyncio.run(main(drawing_path))
 </code></pre></div>
-<p>And voilà, you should now see the overall dimensions of all parts printed on bash.</p>
 <h2 id="further-pointers">Further Pointers<a class="headerlink" href="#further-pointers" title="Permanent link">¶</a></h2>
 <p>In case you plan to implement your own client, have a look at the structure of the Python client.
 It has three "Sublclients" that deal with the different kind of endpoints.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>Please talk to us before you start implementing a client in a different language. We will definately do the peer review and would love to co-author the client to make the client available to other customers. Still, please understand that we do not speak all languages and that you'll need to be in the lead to develop that COBOL-Client (seems to be possible by the way).</p>
+<p>Please talk to us before you start implementing a client in a different language. We are happy to perform peer reviews and would love to make the client available to other customers.</p>
 </div>
 <h3 id="authentication-client">Authentication Client<a class="headerlink" href="#authentication-client" title="Permanent link">¶</a></h3>
 <p>The Authentication Client allows you to obtain a JWT Token from AWS Cognito (see <a href="/docs/basics/authentication">Basics/Authentication</a>). This Token needs to be added to each HTTPS and WSS request as <code>Authorization: Bearer ...</code> .
@@ -519,13 +521,13 @@ Obtaining the Token is straight-foward, mainly because frameworks for many langu
               </span>
 </div>
 </a>
-<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../asks/" rel="next" title="Asks">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../../asks/basics/" rel="next" title="Basics">
 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
 <span class="md-flex__ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Asks
+                Basics
               </span>
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">

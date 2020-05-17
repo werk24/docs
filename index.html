@@ -182,17 +182,17 @@
     Getting Started
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#feeling-impatient">
+    Feeling Impatient?
+  </a>
+</li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="basics/quickstart/" title="Getting Started">
       Getting Started
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="basics/service_times/" title="Service Times">
-      Service Times
     </a>
 </li>
 <li class="md-nav__item">
@@ -246,9 +246,37 @@
       TechreadClient
     </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="api/asks/" title="Asks">
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-4">
       Asks
+    </label>
+<nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+<label class="md-nav__title" for="nav-4">
+        Asks
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="asks/basics/" title="Basics">
+      Basics
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="asks/page/" title="Pages and Sheets">
+      Pages and Sheets
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="asks/sectional/" title="Sectionals">
+      Sectionals
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="asks/variant/" title="Variants and Measures">
+      Variants and Measures
     </a>
 </li>
 </ul>
@@ -270,6 +298,11 @@
     Getting Started
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#feeling-impatient">
+    Feeling Impatient?
+  </a>
+</li>
 </ul>
 </nav>
 </div>
@@ -279,14 +312,49 @@
 <article class="md-content__inner md-typeset">
 <a class="md-icon md-content__icon" href="https://github.com/werk24/edit/master/docs/index.md" title="Edit this page"></a>
 <h1 id="werk24-documentation">Werk24 Documentation<a class="headerlink" href="#werk24-documentation" title="Permanent link">¶</a></h1>
-<p>Welcome to the Werk24 documentation. Werk24 allows to easily access the information of your PDF- or Image-based Technical Drawings. Here we cover everything about the product and the python integration.</p>
+<p>Welcome to the Werk24 documentation! With Werk24 you can easily develop Software Solutions that understand Technical Drawings. Here we cover everything about the API and its platform integrations.</p>
 <h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">¶</a></h2>
 <p>To get started, you might find some of these links relevant:</p>
 <ul>
-<li>New to Werk24? Have a look at the <a href="/docs/basics/quickstart">Getting Started</a></li>
-<li>No account yet? Get in touch with our sales team at <a href="mailto:info@werk24.biz">info@werk24.biz</a></li>
-<li>Stuck? Feel free to contact our support team at <a href="mailto:info@werk24.biz">info@werk24.biz</a></li>
+<li>New to Werk24? Have a look at the <a href="/docs/basics/quickstart">Quickstart</a>.</li>
+<li>No account yet? Get in touch with our sales team at <a href="mailto:info@werk24.biz">info@werk24.biz</a>.</li>
+<li>Stuck? Feel free to contact our support team at <a href="mailto:info@werk24.biz">info@werk24.biz</a>.</li>
 </ul>
+<h2 id="feeling-impatient">Feeling Impatient?<a class="headerlink" href="#feeling-impatient" title="Permanent link">¶</a></h2>
+<p>Getting started with Werk24 is easier than you might imagine. To make your life as easy as possible, we are providing a Python Client that handles the communication with our backend. All that remains for you to do, is pass the document bytes to the client and tell it what you want to learn about the drawing.</p>
+<ol>
+<li>
+<p>Install the python client</p>
+<div class="codehilite"><pre><span></span><code>pip install werk24
+</code></pre></div>
+</li>
+<li>
+<p>Set your password and safe the credentials file in your working directory.</p>
+<p>After the registration we send you a <code>.werk24</code> file the contains all the relevant configuration. Before you can use the client, you need to update your password and store it in the <code>W24TECHREAD_AUTH_PASSWORD</code> value in the <code>.werk24</code> file.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Set your password by clicking on this <a href="https://w24io.auth.eu-central-1.amazoncognito.com/login?client_id=2ksl69eldrro9ud0cbn2sspo2o&amp;response_type=code&amp;scope=email+openid&amp;redirect_uri=https://www.werk24.biz">Link</a>.</p>
+</div>
+</li>
+<li>
+<p>Write your first Werk24 request</p>
+<div class="codehilite"><pre><span></span><code>from werk24 import Hook, W24TechreadClient,W24AskVariantMeasures
+
+# get the drawing_bytes
+document_bytes = ...
+
+# define what you want to learn about the drawing, and what function
+# should be called when a response arrives
+hooks = [Hook(ask=W24AskVariantMeasures(), function=print)]
+
+# make the call
+client = W24TechreadClient.make_from_env()
+async with client as session:
+    await session.read_drawing_with_hooks(document_bytes,hooks)
+</code></pre></div>
+</li>
+</ol>
+<p>That's it.</p>
 </article>
 </div>
 </div>
