@@ -10,7 +10,7 @@
 <meta content="Dr. Jochen Mattes" name="author"/>
 <meta content="Copy to clipboard" name="lang:clipboard.copy"/>
 <meta content="Copied to clipboard" name="lang:clipboard.copied"/>
-<meta content="en, de, ru" name="lang:search.language"/>
+<meta content="en, de" name="lang:search.language"/>
 <meta content="True" name="lang:search.pipeline.stopwords"/>
 <meta content="True" name="lang:search.pipeline.trimmer"/>
 <meta content="No matching documents" name="lang:search.result.none"/>
@@ -29,29 +29,6 @@
 <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
 <link href="../../assets/fonts/material-icons.css" rel="stylesheet"/>
 <link href="//wpcc.io/lib/1.0.2/cookieconsent.min.css" rel="stylesheet"/>
-<script>
-  window.ga = window.ga || function() {
-    (ga.q = ga.q || []).push(arguments)
-  }
-  ga.l = +new Date
-  /* Setup integration and send page view */
-  ga("create", "UA-154730102-1", "auto")
-  ga("set", "anonymizeIp", true)
-  ga("send", "pageview")
-  /* Register handler to log search on blur */
-  document.addEventListener("DOMContentLoaded", () => {
-    if (document.forms.search) {
-      var query = document.forms.search.query
-      query.addEventListener("blur", function() {
-        if (this.value) {
-          var path = document.location.pathname;
-          ga("send", "pageview", path + "?q=" + this.value)
-        }
-      })
-    }
-  })
-</script>
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
 </head>
 <body data-md-color-accent="pink" data-md-color-primary="blue-grey" dir="ltr">
 <svg class="md-svg">
@@ -425,7 +402,6 @@ The thumbnail will be rotated automatically.</p>
 <script src="../../assets/javascripts/application.c33a9706.js"></script>
 <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
 <script src="../../assets/javascripts/lunr/lunr.de.js"></script>
-<script src="../../assets/javascripts/lunr/lunr.ru.js"></script>
 <script src="../../assets/javascripts/lunr/lunr.multi.js"></script>
 <script>app.initialize({version:"1.1",url:{base:"../.."}})</script>
 <script src="https://unpkg.com/mermaid@8.4.8/dist/mermaid.core.js"></script>
