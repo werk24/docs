@@ -8,22 +8,22 @@
 <meta content="Werk24 Client and API documentation" name="description"/>
 <meta content="Dr. Jochen Mattes" name="author"/>
 <link href="../../assets/images/favicon.png" rel="shortcut icon"/>
-<meta content="mkdocs-1.1.2, mkdocs-material-6.1.0" name="generator"/>
-<title>Getting Started - Werk24</title>
-<link href="../../assets/stylesheets/main.bc7e593a.min.css" rel="stylesheet"/>
-<link href="../../assets/stylesheets/palette.ab28b872.min.css" rel="stylesheet"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-6.1.5" name="generator"/>
+<title>Authentication - Werk24</title>
+<link href="../../assets/stylesheets/main.21aed14c.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.196e0c26.min.css" rel="stylesheet"/>
 <meta content="#000000" name="theme-color"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
 <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
 <link href="../../extra.css" rel="stylesheet"/>
 </head>
-<body data-md-color-accent="pink" data-md-color-primary="black" data-md-color-scheme="" dir="ltr">
+<body data-md-color-accent="blue" data-md-color-primary="black" data-md-color-scheme="" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#getting-started">
+<a class="md-skip" href="#authentication">
           Skip to content
         </a>
 </div>
@@ -44,7 +44,7 @@
           </span>
 <span class="md-header-nav__topic md-ellipsis">
             
-              Getting Started
+              Authentication
             
           </span>
 </div>
@@ -56,7 +56,7 @@
 <label class="md-search__overlay" for="__search"></label>
 <div class="md-search__inner" role="search">
 <form class="md-search__form" name="search">
-<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="Search" spellcheck="false" type="text"/>
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
 <label class="md-search__icon md-icon" for="__search">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
@@ -93,16 +93,16 @@
     Werk24
   </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-1" id="nav-1" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" id="nav-1" type="checkbox"/>
 <label class="md-nav__link" for="nav-1">
-      HOME
+      GETTING STARTED
       <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-label="HOME" class="md-nav" data-md-level="1">
+<nav aria-label="GETTING STARTED" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="nav-1">
 <span class="md-nav__icon md-icon"></span>
-        HOME
+        GETTING STARTED
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -110,42 +110,9 @@
       Welcome
     </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-        Getting Started
-        <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
-      Getting Started
-    </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#install-the-client">
-    Install the Client
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#configure-the-client">
-    Configure the Client
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#test-the-client">
-    Test the Client
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../authentication/">
-      Authentication
+<a class="md-nav__link" href="../basic_concepts/">
+      Basic Concepts
     </a>
 </li>
 </ul>
@@ -154,11 +121,106 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" id="nav-2" type="checkbox"/>
 <label class="md-nav__link" for="nav-2">
+      TUTORIALS
+      <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="TUTORIALS" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-2">
+<span class="md-nav__icon md-icon"></span>
+        TUTORIALS
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/thumbnails/">
+      Thumbnails
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-3">
+      ASKS
+      <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ASKS" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-3">
+<span class="md-nav__icon md-icon"></span>
+        ASKS
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../asks/basics/">
+      Basics
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../asks/page_thumbnail/">
+      Page / Thumbnail
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../asks/sheet_thumbnail/">
+      Sheet / Thumbnail
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../asks/canvas_thumbnail/">
+      Canvas / Thumbnail
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../asks/variant_measures/">
+      Variant / Measures
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-4">
+      MODELS
+      <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="MODELS" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-4">
+<span class="md-nav__icon md-icon"></span>
+        MODELS
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../models/w24measure/">
+      W24Measure
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../models/w24measure_label/">
+      W24MeasureLabel
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../models/w24size/">
+      W24Size
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../models/w24size_tolerance/">
+      W24SizeTolerance
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" id="nav-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-5">
       CLI
       <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-label="CLI" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="nav-2">
+<label class="md-nav__title" for="nav-5">
 <span class="md-nav__icon md-icon"></span>
         CLI
       </label>
@@ -171,66 +233,6 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../cli/techread/">
       Techread
-    </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
-<label class="md-nav__link" for="nav-3">
-      API
-      <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="API" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="nav-3">
-<span class="md-nav__icon md-icon"></span>
-        API
-      </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../api/basics/">
-      Getting Started
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../api/techread-client/">
-      TechreadClient
-    </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
-<label class="md-nav__link" for="nav-4">
-      Asks
-      <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Asks" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="nav-4">
-<span class="md-nav__icon md-icon"></span>
-        Asks
-      </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../asks/basics/">
-      Basics
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../asks/page/">
-      Pages and Sheets
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../asks/sectional/">
-      Sectionals
-    </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../asks/variant/">
-      Variants and Measures
     </a>
 </li>
 </ul>
@@ -251,18 +253,8 @@
     </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#install-the-client">
-    Install the Client
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#configure-the-client">
-    Configure the Client
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#test-the-client">
-    Test the Client
+<a class="md-nav__link" href="#credentials-file">
+    Credentials File
   </a>
 </li>
 </ul>
@@ -272,40 +264,23 @@
 </div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
-<h1 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">¶</a></h1>
-<p>Werk24 is designed to make your life with handling Technical Drawings as convenient as possible.
-This Tutorial will get you set up.</p>
-<p>We will:</p>
-<ul>
-<li><a href="#install-the-client">Install the Client</a></li>
-<li><a href="#configure-the-client">Store the Credentials</a></li>
-<li><a href="#test-the-client">Test the Client</a></li>
-</ul>
-<h2 id="install-the-client">Install the Client<a class="headerlink" href="#install-the-client" title="Permanent link">¶</a></h2>
-<p>Werk24 provides an easy-to-use and easy-to-extend Python-based client.
-Install our Python Client using <a href="https://pip.pypa.io/en/stable/">pip</a> or npm.</p>
-<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><label for="__tabbed_1_1">Python</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>pip install werk24
-</code></pre></div>
-</div>
-<input id="__tabbed_1_2" name="__tabbed_1" type="radio"><label for="__tabbed_1_2">NodeJS</label><div class="tabbed-content">
-<p><code>bash
-npm install werk24</code>    pip install werk24</p>
-</div>
-</input></input></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Should you be interested in a Client for a different language, please get in touch with us at info@werk24.biz.</p>
-</div>
-<h2 id="configure-the-client">Configure the Client<a class="headerlink" href="#configure-the-client" title="Permanent link">¶</a></h2>
-<p>The Client uses <a href="https://aws.amazon.com/cognito/">AWS Cognito</a> to handle Authentication.
-This has several advantages:</p>
-<ul>
-<li>Security updates are handled by a dedicated team</li>
-<li>Standard libraries are available for a large range of languages</li>
-<li>You will be able to maintain individual accounts for your own customers.</li>
-</ul>
-<p>During the registration process we provide you with a <code>.werk24</code> file, that contains all the information that you will need. It will look similar to this:</p>
+<h1 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">¶</a></h1>
+<p>Werk24 uses the <a href="https://aws.amazon.com/cognito/">AWS Cognito Service</a> to identify a user.
+We have decided to use on this service, mainly because it provides you with two advantages:</p>
+<ol>
+<li>
+<p>The source code that handles the authentication is constantly monitored and improved by a dedicated and highly-specialized team.</p>
+</li>
+<li>
+<p>Many standard libraries exist that handle the authentication process for you.</p>
+</li>
+<li>
+<p>We can provide you with diffent user names for different geographies, allowing you to ensure that your customer's data does not leave its region-of-origin. See <a href="https://en.wikipedia.org/wiki/General_Data_Protection_Regulation">General Data Protetion Regulation (GDPR)</a>.</p>
+</li>
+</ol>
+<h2 id="credentials-file">Credentials File<a class="headerlink" href="#credentials-file" title="Permanent link">¶</a></h2>
+<p>During the registration process, Werk24 will have provided you with an .werk24 file that contains all the information that is required to authenticate with our API. This file assumes that you have only registered one user with Werk24.</p>
+<p>The file will look like this</p>
 <div class="codehilite"><pre><span></span><code>W24TECHREAD_AUTH_REGION="eu-central-1"
 W24TECHREAD_AUTH_CLIENT_ID="xxxxxxxxxxxxxxxxxxxxxxxxxx"
 W24TECHREAD_AUTH_CLIENT_SECRET="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
@@ -315,55 +290,12 @@ W24TECHREAD_SERVER_HTTPS="techread.w24.io"
 W24TECHREAD_SERVER_WSS="techread-ws.w24.io"
 W24TECHREAD_VERSION="v1"
 </code></pre></div>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>When you choose to use your .werk24 file directly, add <code>.werk24</code> to your .gitignore file to ensure that the credentials remain stored locally. For production environments we strongly recommend setting the credentials as ENVIRONMENT VARIABLES.</p>
-</div>
-<p>For more details see <a href="/docs/basics/authentication">Authentication</a></p>
-<h2 id="test-the-client">Test the Client<a class="headerlink" href="#test-the-client" title="Permanent link">¶</a></h2>
-<p>You can check whether client is installed and configured correctly by submitting a simple Techread request through the CLI. The request submits the technical drawing to the API and returns a thumbnail of the individual sectionals. To be able to see the image, ensure that you have the <a href="https://python-pillow.org">Pillow</a> package installed.</p>
-<div class="codehilite"><pre><span></span><code>pip install Pillow
-</code></pre></div>
-<p>After that you can submit the request by running</p>
-<div class="codehilite"><pre><span></span><code>w24cli techread --ask-page-thumbnail ./your-file.pdf
-</code></pre></div>
-<p>You should now see one or more images of the individual cuts on your Technical Drawing.
-Have a look at the additional details at the <a href="/docs/cli/basic">CLI Documentation</a>.</p>
+<p>The content of the file will be used when you call the <code>TechreadClient.make_from_env()</code> method.</p>
 </article>
 </div>
 </div>
 </main>
 <footer class="md-footer">
-<div class="md-footer-nav">
-<nav aria-label="Footer" class="md-footer-nav__inner md-grid">
-<a class="md-footer-nav__link md-footer-nav__link--prev" href="../.." rel="prev">
-<div class="md-footer-nav__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
-</div>
-<div class="md-footer-nav__title">
-<div class="md-ellipsis">
-<span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Welcome
-              </div>
-</div>
-</a>
-<a class="md-footer-nav__link md-footer-nav__link--next" href="../authentication/" rel="next">
-<div class="md-footer-nav__title">
-<div class="md-ellipsis">
-<span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Authentication
-              </div>
-</div>
-<div class="md-footer-nav__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
-</div>
-</a>
-</nav>
-</div>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-footer-copyright">
@@ -380,8 +312,8 @@ Have a look at the additional details at the <a href="/docs/cli/basic">CLI Docum
 </div>
 </footer>
 </div>
-<script src="../../assets/javascripts/vendor.6a3d08fc.min.js"></script>
-<script src="../../assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+<script src="../../assets/javascripts/vendor.7e0ee788.min.js"></script>
+<script src="../../assets/javascripts/bundle.b3a72adc.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
 <script>
         app = initialize({
           base: "../..",
