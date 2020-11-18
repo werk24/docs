@@ -1,110 +1,130 @@
 # TechreadClient
 
-The Techread Client is a python-based reference implementation to illustrate the communication with the werk24 API. It is actively maintained and will be the lead-implementation for all our development efforts. That means that new features will become available here first.
-
-!!! important
-Downward compatability is very important to us, and we take due care to announce breaking changes with adequate notice. Still, we urge you to implement your own integration tests!
-
-!!! note
-Should you be interested in a client for a different language, please get in touch with us.
-
-## Installation
-
-Werk24 provides an easy-to-use and easy-to-extend Python-based client.
-Install our Python Client using [pip](https://pip.pypa.io/en/stable/):
-
-    pip install git+https://git@github.com/werk24/werk24-python.git@master#egg=werk24
-
-You can also add this URL directly into your `requirements.txt`.
-
-    ...
-    git+https://git@github.com/werk24/werk24-python.git@master#egg=werk24
-    ...
-
-## Setting up the environment
-
-During the registration process, we will have provided you with a `.env` file that contains all the necessary authentication details and environment variables. You can either set these variables in you environment manually, or load it with the [dotenv Package](https://github.com/theskumar/python-dotenv).
-
-    pip install dotenv-python
-
-!!! important
-Use the `dotenv-python` package, not the `dotenv`
-
-Once you have the dotenv package installed, you can easily load the environment variables like so:
-
-    from dotenv load_dotenv
-    load_dotenv()
+The Techread Client is a python-based reference implementation to illustrate the communication with the werk24 API. It is actively maintained and will be the lead-implementation for all our development efforts.
 
 ## Initiating the Client
 
-You can start a new Techread client with two lines. This will create a new client from the environment variables.
+You can make a new Techread client in two lines of code.
 
     from werk24 import W24TechreadClient
     client = W24TechreadClient.make_from_env()
 
-## Defining your asks
+This will create a new client from the environment variables. The client will look for the credentials in the `.werk24` file in your working directory. If the file cannot be found, the Client falls back to the information it can obtain from the `ENVIRONMENT VARIABLES` .
 
-We understand that time is of utter importance when the customer is waiting for a response. To make sure that you can keep your customer entertained, we make the results available as soon as possible. The result is a continuous flow of information, that you can "subscribe" to.
+## The Ask Concept
+
+We understand that the individual use-cases can vary largely. Take these two extremes:
+
+1. Application 1 runs a batch job to obtain thumbnails of the main sectional on a Technical Drawing.
+2. Application 2 wants to derive the minimal tolerances on an A0 Technical drawing to inform the live-pricing engine. The user remains online and wants to be entertained while she is waiting for the price assessment.
+
+To serve both applications with the same API, we have introduced the concept "Ask", which allows you to define very precicely what you want to learn about the Technical Drawing. Each "Ask" then triggers a response as soon as the information becomes available.
+
+To come back to our application:
+
+ 1. Applciation 1 would submit only one Ask:
+
+    -  W24AskSectionalThumbnail()
+
+2. Application 2 would submit multiple Asks
+
+    - W24AskSheetThumbnail() -- gives the user an overview over the complete sheet
+    - W24AskSectionalThumbail() -- shows to the user that the individual sectionals have been separated correctly
+    - W24AskVariantMeasures() -- delivers the complete information about the Measures (incl. tolerances)
+
+See [API/Asks](/docs/api/asks) for details.
+
+## Defining Hooks
 
 To make your life as developer as easy as possible, we introduced a small `Hook` object that allows you to define
 
-1. The ask, and
-2. What function to call one the ask becomes available
+1. The Ask, and
+2. What function should be called when the Ask is answered
 
-Defining your asks can be done as follows
+The defintion is very simple:
 
-    from werk24 import Hook,W24AskPartOverallDimensions
-    hooks = [
-        Hook(
-            ask=W24AskPartOverallDimensions(),
-            function=lambda: msg: print(msg)
-        )
-    ]
+    from werk24 import Hook,W24AskVariantMeasures
+    hooks = [Hook(ask=W24AskVariantMeasures(), function=print)]
 
 For a full list of available asks, refer to [API/Asks](/docs/api/asks)
 
 ## Submitting a Request
 
-Submitting a request requires you to start a session and submit both, a technical drawing (as bytes) and a list of hooks
+Submitting a request requires you to start a session and submit both, a Technical Drawing (as bytes) and a list of hooks
+
+    drawing_path = ...
+    drawing_bytes = open(drawing_path, "rb").read()
 
     async with client as session
-
-        drawing_path = ...
-        drawing_bytes = open(drawing_path, "rb").read()
-
         session.read_drawing_with_hooks(
             drawing_bytes,
             hooks)
 
-!!! important
-Be sure to call the sniplet asyncinously (see Full Example)
+!!! important Be sure to call the sniplet asyncinously (see Full Example)
 
 ## Full Example
 
-Combining all parts from above.
+Combining all parts from above, we arrive at the full example. When you call the script with the path to a Technical Drawing as first argument, you should shortly after see the measures that were detected on the
+Drawing. Be aware that the API will return a response for each sectional that was found on the Canvas.
+If your Document contains 2 Pages with 2 Sectionals each, you will receive 4 responses.
 
     import asyncio
-    from werk24 import W24TechreadClient, W24AskPartOverallDimensions, Hook
+    import sys
+    from dotenv import load_dotenv
+    from werk24 import W24TechreadClient, W24AskVariantMeasures, Hook
 
-    async def main():
-        hooks = [
-            Hook(
-                ask=W24AskPartOverallDimensions(),
-                function=lambda: msg: print(msg)
-            )
-        ]
+    load_dotenv('.werk24')
 
+    async def main(drawing_path:str) -> None:
+
+        # define the hooks
+        hooks = [Hook(ask=W24AskVariantMeasures(), function=print)]
+
+        # make the session and start the reading process
         client = W24TechreadClient.make_from_env()
-        async with client as session
+        async with client as session:
+            await session.read_drawing_with_hooks(drawing_bytes, hooks)
 
-            drawing_path = ...
-            drawing_bytes = open(drawing_path, "rb").read()
+    if __name__ == "__main__":
+        try:
+            drawing_path = sys.argv[1]
 
-            session.read_drawing_with_hooks(
-                drawing_bytes,
-                hooks)
+            # get the drawing
+            with open(drawing_path, "rb") as drawing_handle:
+                drawing_bytes = drawing_handle.read()
+        except FileNotFoundError:
+            sys.exit("File not found")
 
-    if  __name__ == "__main__":
-        asyncio.run(main())
+        except KeyError:
+            sys.exit("Drawing Path Required as first argument")
 
-And voilà, you should now see the overall dimensions of all parts printed on bash.
+    asyncio.run(main(drawing_path))
+
+## Further Pointers
+
+In case you plan to implement your own client, have a look at the structure of the Python client.
+It has three "Sublclients" that deal with the different kind of endpoints.
+
+!!! important
+
+    Please talk to us before you start implementing a client in a different language. We are happy to perform peer reviews and would love to make the client available to other customers.
+
+### Authentication Client
+
+The Authentication Client allows you to obtain a JWT Token from AWS Cognito (see [Basics/Authentication](/docs/basics/authentication)). This Token needs to be added to each HTTPS and WSS request as `Authorization: Bearer ...` .
+Obtaining the Token is straight-foward, mainly because frameworks for many languages exist. See [Github/werk24/werk24-python/auth_client.py](https://github.com/werk24/werk24/blob/master/werk24/auth_client.py) for a python-based reference implementation.
+
+### Techread HTTPS Client
+
+The Techread HTTPS Client is used to
+
+1. Upload Technical Drawings
+2. Upload Models
+3. Download binary Ask Responses
+
+### Techread WSS Client
+
+The Techread WSS Client is used to:
+
+1. Initiate a Request
+2. Listen to Responses in "near-real-time"

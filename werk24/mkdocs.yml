@@ -5,28 +5,37 @@ site_author: "Dr. Jochen Mattes"
 copyright: "Copyright &copy; 2020 Werk24"
 
 nav:
-  - HOME: index.md
-  - BASICS:
-      - Getting Started: basics/quickstart.md
-      - Service Times: basics/service_times.md
-      - Authentication: basics/authentication.md
+  - GETTING STARTED:
+      - Welcome: index.md
+      - Basic Concepts: getting_started/basic_concepts.md
+  - TUTORIALS:
+      - Thumbnails: tutorials/thumbnails.md
+
+  - ASKS:
+      - Basics: asks/basics.md
+      - Page / Thumbnail: asks/page_thumbnail.md
+      - Sheet / Thumbnail: asks/sheet_thumbnail.md
+      - Canvas / Thumbnail: asks/canvas_thumbnail.md
+      - Variant / Measures: asks/variant_measures.md
+
+  - MODELS:
+      - W24Measure: models/w24measure.md
+      - W24MeasureLabel: models/w24measure_label.md
+      - W24Size: models/w24size.md
+      - W24SizeTolerance: models/w24size_tolerance.md
+    
   - CLI:
       - Basic: cli/basic.md
       - Techread: cli/techread.md
-  - API:
-      - Getting Started: api/basics.md
-      - TechreadClient: api/techread-client.md
-      - Asks: api/asks.md
 theme:
   name: "material"
   palette:
-    primary: "blue-grey"
-  font:
-    text: "Roboto"
-    code: "Roboto Mono"
-  # logo: "images/logo.png"
+    primary: "black"
+    accent: "blue"
+  language: "en"
   feature:
     tabs: true
+  # sticky_navigation: true
 
 # Extensions
 markdown_extensions:
@@ -35,9 +44,33 @@ markdown_extensions:
       guess_lang: false
   - toc:
       permalink: true
+  - tables
+  - pymdownx.betterem
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.tabbed
+  - markdown.extensions.footnotes
+  - markdown.extensions.attr_list
+  - markdown.extensions.def_list
+  - markdown.extensions.tables
+  - markdown.extensions.abbr
+  - markdown.extensions.md_in_html
+
+
 
 plugins:
   - mermaid2
+  - search
 
 extra_javascript:
   - https://unpkg.com/mermaid@8.4.8/dist/mermaid.core.js
+  - matomoto.js
+
+extra_css:
+  - extra.css
+
+extra:
+  search:
+    language: "en, de"
+
+repo_name: "werk24"
