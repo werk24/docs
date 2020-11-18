@@ -9,7 +9,7 @@
 <meta content="Dr. Jochen Mattes" name="author"/>
 <link href="../../assets/images/favicon.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.1.2, mkdocs-material-6.1.5" name="generator"/>
-<title>Techread - Werk24</title>
+<title>Getting Started - Werk24</title>
 <link href="../../assets/stylesheets/main.21aed14c.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.196e0c26.min.css" rel="stylesheet"/>
 <meta content="#000000" name="theme-color"/>
@@ -23,7 +23,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#techread-subcommand">
+<a class="md-skip" href="#getting-started">
           Skip to content
         </a>
 </div>
@@ -44,7 +44,7 @@
           </span>
 <span class="md-header-nav__topic md-ellipsis">
             
-              Techread
+              Getting Started
             
           </span>
 </div>
@@ -111,7 +111,7 @@
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../getting_started/basic_concepts/">
+<a class="md-nav__link" href="../basic_concepts/">
       Basic Concepts
     </a>
 </li>
@@ -213,8 +213,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-5" id="nav-5" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" id="nav-5" type="checkbox"/>
 <label class="md-nav__link" for="nav-5">
       CLI
       <span class="md-nav__icon md-icon"></span>
@@ -226,32 +226,14 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../basic/">
+<a class="md-nav__link" href="../../cli/basic/">
       Basic
     </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-        Techread
-        <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/techread/">
       Techread
     </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#available-commands">
-    Available Commands
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -271,8 +253,18 @@
     </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#available-commands">
-    Available Commands
+<a class="md-nav__link" href="#install-the-client">
+    Install the Client
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configure-the-client">
+    Configure the Client
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#test-the-client">
+    Test the Client
   </a>
 </li>
 </ul>
@@ -282,54 +274,68 @@
 </div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
-<h1 id="techread-subcommand">Techread Subcommand<a class="headerlink" href="#techread-subcommand" title="Permanent link">¶</a></h1>
-<p>The techread subcommand allows you to submit your Technical Drawing and ask Werk24 to return certain details about it. We call these details "asks". See <a href="/docs/api/asks">API/Asks</a> for a more detailed description. While the API allows you to define your asks in a more granular way, the CLI will always request each ask with its default attributes.</p>
-<h2 id="available-commands">Available Commands<a class="headerlink" href="#available-commands" title="Permanent link">¶</a></h2>
-<p>The sniplet below gives you an overview over the available commands. You can obtain the same output by calling <code>w24cli techread --help</code> .</p>
-<div class="codehilite"><pre><span></span><code>usage: w24cli techread [-h] [--ask-techread-started] [--ask-page-thumbnail]
-                   [--ask-sheet-thumbnail] [--ask-sectional-thumbnail]
-                   [--ask-variant-measures]
-                   input_file
-
-positional arguments:
-  input_file            path to the file that is to be analyzed
-
-optional arguments:
-  -h, --help            show this help message and exit
-  --ask-techread-started
-                        ask for a callback when the techread process has been
-                        picked up by a worker
-  --ask-page-thumbnail  ask for a thumbnail for each page in the document
-  --ask-sheet-thumbnail
-                        ask for a thumbnail of each sheet in the document
-  --ask-sectional-thumbnail
-                        ask for a thumbnail of each sectional of each sheet in
-                        the document
-  --ask-variant-measures
-                        ask for the measures of each variant
+<h1 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">¶</a></h1>
+<p>Werk24 is designed to make your life with handling Technical Drawings as convenient as possible.
+This Tutorial will get you set up.</p>
+<p>We will:</p>
+<ul>
+<li><a href="#install-the-client">Install the Client</a></li>
+<li><a href="#configure-the-client">Store the Credentials</a></li>
+<li><a href="#test-the-client">Test the Client</a></li>
+</ul>
+<h2 id="install-the-client">Install the Client<a class="headerlink" href="#install-the-client" title="Permanent link">¶</a></h2>
+<p>Werk24 provides an easy-to-use and easy-to-extend Python-based client.
+Install our Python Client using <a href="https://pip.pypa.io/en/stable/">pip</a> or npm.</p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><label for="__tabbed_1_1">Python</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>pip install werk24
 </code></pre></div>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio"><label for="__tabbed_1_2">NodeJS</label><div class="tabbed-content">
+<p><code>bash
+npm install werk24</code>    pip install werk24</p>
+</div>
+</input></input></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Should you be interested in a Client for a different language, please get in touch with us at info@werk24.biz.</p>
+</div>
+<h2 id="configure-the-client">Configure the Client<a class="headerlink" href="#configure-the-client" title="Permanent link">¶</a></h2>
+<p>The Client uses <a href="https://aws.amazon.com/cognito/">AWS Cognito</a> to handle Authentication.
+This has several advantages:</p>
+<ul>
+<li>Security updates are handled by a dedicated team</li>
+<li>Standard libraries are available for a large range of languages</li>
+<li>You will be able to maintain individual accounts for your own customers.</li>
+</ul>
+<p>During the registration process we provide you with a <code>.werk24</code> file, that contains all the information that you will need. It will look similar to this:</p>
+<div class="codehilite"><pre><span></span><code>W24TECHREAD_AUTH_REGION="eu-central-1"
+W24TECHREAD_AUTH_CLIENT_ID="xxxxxxxxxxxxxxxxxxxxxxxxxx"
+W24TECHREAD_AUTH_CLIENT_SECRET="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+W24TECHREAD_AUTH_USERNAME="xx@xx.xx"
+W24TECHREAD_AUTH_PASSWORD="--- INSERT HERE ---"
+W24TECHREAD_SERVER_HTTPS="techread.w24.io"
+W24TECHREAD_SERVER_WSS="techread-ws.w24.io"
+W24TECHREAD_VERSION="v1"
+</code></pre></div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>When you choose to use your .werk24 file directly, add <code>.werk24</code> to your .gitignore file to ensure that the credentials remain stored locally. For production environments we strongly recommend setting the credentials as ENVIRONMENT VARIABLES.</p>
+</div>
+<p>For more details see <a href="/docs/basics/authentication">Authentication</a></p>
+<h2 id="test-the-client">Test the Client<a class="headerlink" href="#test-the-client" title="Permanent link">¶</a></h2>
+<p>You can check whether client is installed and configured correctly by submitting a simple Techread request through the CLI. The request submits the technical drawing to the API and returns a thumbnail of the individual sectionals. To be able to see the image, ensure that you have the <a href="https://python-pillow.org">Pillow</a> package installed.</p>
+<div class="codehilite"><pre><span></span><code>pip install Pillow
+</code></pre></div>
+<p>After that you can submit the request by running</p>
+<div class="codehilite"><pre><span></span><code>w24cli techread --ask-page-thumbnail ./your-file.pdf
+</code></pre></div>
+<p>You should now see one or more images of the individual cuts on your Technical Drawing.
+Have a look at the additional details at the <a href="/docs/cli/basic">CLI Documentation</a>.</p>
 </article>
 </div>
 </div>
 </main>
 <footer class="md-footer">
-<div class="md-footer-nav">
-<nav aria-label="Footer" class="md-footer-nav__inner md-grid">
-<a class="md-footer-nav__link md-footer-nav__link--prev" href="../basic/" rel="prev">
-<div class="md-footer-nav__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
-</div>
-<div class="md-footer-nav__title">
-<div class="md-ellipsis">
-<span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Basic
-              </div>
-</div>
-</a>
-</nav>
-</div>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-footer-copyright">

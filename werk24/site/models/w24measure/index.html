@@ -9,7 +9,7 @@
 <meta content="Dr. Jochen Mattes" name="author"/>
 <link href="../../assets/images/favicon.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.1.2, mkdocs-material-6.1.5" name="generator"/>
-<title>Techread - Werk24</title>
+<title>W24Measure - Werk24</title>
 <link href="../../assets/stylesheets/main.21aed14c.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.196e0c26.min.css" rel="stylesheet"/>
 <meta content="#000000" name="theme-color"/>
@@ -23,9 +23,6 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#techread-subcommand">
-          Skip to content
-        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -44,7 +41,7 @@
           </span>
 <span class="md-header-nav__topic md-ellipsis">
             
-              Techread
+              W24Measure
             
           </span>
 </div>
@@ -178,8 +175,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
 <label class="md-nav__link" for="nav-4">
       MODELS
       <span class="md-nav__icon md-icon"></span>
@@ -190,31 +187,32 @@
         MODELS
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../models/w24measure/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="./">
       W24Measure
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../models/w24measure_label/">
+<a class="md-nav__link" href="../w24measure_label/">
       W24MeasureLabel
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../models/w24size/">
+<a class="md-nav__link" href="../w24size/">
       W24Size
     </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../models/w24size_tolerance/">
+<a class="md-nav__link" href="../w24size_tolerance/">
       W24SizeTolerance
     </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-5" id="nav-5" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" id="nav-5" type="checkbox"/>
 <label class="md-nav__link" for="nav-5">
       CLI
       <span class="md-nav__icon md-icon"></span>
@@ -226,54 +224,17 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../basic/">
+<a class="md-nav__link" href="../../cli/basic/">
       Basic
     </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-        Techread
-        <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../cli/techread/">
       Techread
     </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#available-commands">
-    Available Commands
-  </a>
 </li>
 </ul>
 </nav>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</div>
-</div>
-</div>
-<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-<div class="md-sidebar__scrollwrap">
-<div class="md-sidebar__inner">
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#available-commands">
-    Available Commands
-  </a>
 </li>
 </ul>
 </nav>
@@ -282,32 +243,43 @@
 </div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
-<h1 id="techread-subcommand">Techread Subcommand<a class="headerlink" href="#techread-subcommand" title="Permanent link">¶</a></h1>
-<p>The techread subcommand allows you to submit your Technical Drawing and ask Werk24 to return certain details about it. We call these details "asks". See <a href="/docs/api/asks">API/Asks</a> for a more detailed description. While the API allows you to define your asks in a more granular way, the CLI will always request each ask with its default attributes.</p>
-<h2 id="available-commands">Available Commands<a class="headerlink" href="#available-commands" title="Permanent link">¶</a></h2>
-<p>The sniplet below gives you an overview over the available commands. You can obtain the same output by calling <code>w24cli techread --help</code> .</p>
-<div class="codehilite"><pre><span></span><code>usage: w24cli techread [-h] [--ask-techread-started] [--ask-page-thumbnail]
-                   [--ask-sheet-thumbnail] [--ask-sectional-thumbnail]
-                   [--ask-variant-measures]
-                   input_file
-
-positional arguments:
-  input_file            path to the file that is to be analyzed
-
-optional arguments:
-  -h, --help            show this help message and exit
-  --ask-techread-started
-                        ask for a callback when the techread process has been
-                        picked up by a worker
-  --ask-page-thumbnail  ask for a thumbnail for each page in the document
-  --ask-sheet-thumbnail
-                        ask for a thumbnail of each sheet in the document
-  --ask-sectional-thumbnail
-                        ask for a thumbnail of each sectional of each sheet in
-                        the document
-  --ask-variant-measures
-                        ask for the measures of each variant
-</code></pre></div>
+<h1>W24Measure</h1>
+<table>
+<thead>
+<tr>
+<th>PAYLOAD DICT</th>
+<th></th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>measure_id</td>
+<td><code>UUID4</code> -- Unqiue <code>UUID</code> that identifies the measure</td>
+<td>"15012f90-f755-48cf-b121-7542e88b9ec8"</td>
+</tr>
+<tr>
+<td>line</td>
+<td><code>Tuple[Tuple[float,float],Tuple[float,float]]</code> -- Tuple of the measure's start- and end-coordinates in the Pixel Coordinate system of the sectional. The coordinates are normalized by the width and height of the associated object (e.g., the sectional). If you want to obtain the absolute position in the original image, you need to consider the following offsets: sectional + canvas + sheet.</td>
+<td>((0.1,0.5),(0.2,0.5))</td>
+</tr>
+<tr>
+<td>label</td>
+<td><code>W24MeasureLabel</code> -- Details on the Measure Label</td>
+<td>See <a href="/models/w24measure_label">W24MeasureLabel</a></td>
+</tr>
+<tr>
+<td>warnings</td>
+<td><code>List[W24MeasureWarning]</code> - List of Warnings that are associated with the measure. See W24MeasureWarning for details</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>confidence</td>
+<td><code>float</code> - Werk24 calculates an internal confidence score for each measure. Depending on your use-case, you might want to consider or discard low-confidence measures. This value allows you to do so. The value ranges from 0.0 to 1.0</td>
+<td>0.93</td>
+</tr>
+</tbody>
+</table>
 </article>
 </div>
 </div>
@@ -315,7 +287,7 @@ optional arguments:
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav aria-label="Footer" class="md-footer-nav__inner md-grid">
-<a class="md-footer-nav__link md-footer-nav__link--prev" href="../basic/" rel="prev">
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="../../asks/variant_measures/" rel="prev">
 <div class="md-footer-nav__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -324,8 +296,21 @@ optional arguments:
 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Basic
+                Variant / Measures
               </div>
+</div>
+</a>
+<a class="md-footer-nav__link md-footer-nav__link--next" href="../w24measure_label/" rel="next">
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                  Next
+                </span>
+                W24MeasureLabel
+              </div>
+</div>
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
 </div>
 </a>
 </nav>
