@@ -37,7 +37,7 @@ markdown_extensions:
       permalink: true
 
 plugins:
-  - markdownmermaid
+  - mermaid2
 
 extra_javascript:
   - https://unpkg.com/mermaid@8.4.8/dist/mermaid.core.js

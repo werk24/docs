@@ -1,0 +1,4 @@
+beautifulsoup4
+mkdocs
+mkdocs-material
+mkdocs-mermaid2-plugin
