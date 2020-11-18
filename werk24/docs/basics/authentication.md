@@ -11,7 +11,7 @@ We have decided to use on this service, mainly because it provides you with two 
 
 ## Credentials File
 
-During the registration process, Werk24 will have provided you with an .env file that contains all the information that is required to authenticate with our API. This file assumes that you have only registered one user with Werk24.
+During the registration process, Werk24 will have provided you with an .werk24 file that contains all the information that is required to authenticate with our API. This file assumes that you have only registered one user with Werk24.
 
 The file will look like this
 

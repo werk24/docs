@@ -5,10 +5,10 @@ site_author: "Dr. Jochen Mattes"
 copyright: "Copyright &copy; 2020 Werk24"
 
 nav:
-  - HOME: index.md
-  - BASICS:
+  # - HOME:
+  - HOME:
+      - Welcome: index.md
       - Getting Started: basics/quickstart.md
-      - Service Times: basics/service_times.md
       - Authentication: basics/authentication.md
   - CLI:
       - Basic: cli/basic.md
@@ -16,17 +16,20 @@ nav:
   - API:
       - Getting Started: api/basics.md
       - TechreadClient: api/techread-client.md
-      - Asks: api/asks.md
+  - Asks:
+      - Basics: asks/basics.md
+      - Pages and Sheets: asks/page.md
+      - Sectionals: asks/sectional.md
+      - Variants and Measures: asks/variant.md
 theme:
   name: "material"
   palette:
-    primary: "blue-grey"
-  font:
-    text: "Roboto"
-    code: "Roboto Mono"
-  # logo: "images/logo.png"
+    primary: "black"
+    accent: "pink"
+  language: "en"
   feature:
-    tabs: true
+    tabs: false
+  # sticky_navigation: true
 
 # Extensions
 markdown_extensions:
@@ -35,9 +38,33 @@ markdown_extensions:
       guess_lang: false
   - toc:
       permalink: true
+  - tables
+  - pymdownx.betterem
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.tabbed
+  - markdown.extensions.footnotes
+  - markdown.extensions.attr_list
+  - markdown.extensions.def_list
+  - markdown.extensions.tables
+  - markdown.extensions.abbr
+  - markdown.extensions.md_in_html
+
+
 
 plugins:
   - markdownmermaid
+  - search
 
 extra_javascript:
   - https://unpkg.com/mermaid@8.4.8/dist/mermaid.core.js
+  - matomoto.js
+
+extra_css:
+  - extra.css
+
+extra:
+  search:
+    language: "en, de"
+
+repo_name: "werk24"
