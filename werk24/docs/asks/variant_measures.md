@@ -12,5 +12,5 @@ Each sheet may describe one or more Variants, depending on the precense of a W24
 | sheet_id     | `UUID4` -- Unqiue `UUID` that identifies the sheet       |  "5bc164d4-df0d-4482-9048-3a84de010abf"       |
 | canvas_id    | `UUID4` -- Unqiue `UUID` that identifies the canvas      |  "9e6399a6-0b43-4b47-a416-0918254bba16"       |
 | variant_id   | `UUID4` -- Unqiue `UUID` that identifies the variant     |  "2680c8ca-6c74-4665-b293-02552d4f00a5       |
-| measures     | List[W24Measure] <br> List of all the Measures that were detected on the Sectional | See [Models/W24Measure](/models/w24measure) |
+| measures     | List[W24Measure] <br> List of all the Measures that were detected on the Sectional | See [Models/W24Measure](./models/w24measure) |
 

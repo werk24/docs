@@ -46,8 +46,8 @@ For your convenience, we are distributing the clients through [PyPi](https://pyp
 
 
 ## Send your first request
-To get all measures of (all variants) indicated on your drawing, you would pass an [W24AskVariantMeasures](/asks/variant/#w24variantmeasures) instance along
-with the drawing bytes. For an overview of available Asks see [here](/asks/basics/).
+To get all measures of (all variants) indicated on your drawing, you would pass an [W24AskVariantMeasures](./asks/variant/#w24variantmeasures) instance along
+with the drawing bytes. For an overview of available Asks see [here](./asks/basics/).
 
 === "Python"
     ```python

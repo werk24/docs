@@ -13,4 +13,4 @@ If you have installed Werk24 with PIP, you will have the `w24cli` command availa
 
 ## Subcommand Techread
 
-The command line interface allows you to interact with the Werk24 APIs. To ensure downwards compatibility, we have added the subcommand '[techread](/docs/cli/techread)'. Further subcommands might follow in the future.
+The command line interface allows you to interact with the Werk24 APIs. To ensure downwards compatibility, we have added the subcommand '[techread](./cli/techread)'. Further subcommands might follow in the future.

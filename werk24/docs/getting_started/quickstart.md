@@ -52,7 +52,7 @@ During the registration process we provide you with a `.werk24` file, that conta
 
     When you choose to use your .werk24 file directly, add `.werk24` to your .gitignore file to ensure that the credentials remain stored locally. For production environments we strongly recommend setting the credentials as ENVIRONMENT VARIABLES.
 
-For more details see [Authentication](/docs/basics/authentication)
+For more details see [Authentication](./basics/authentication)
 
 ## Test the Client
 
@@ -65,4 +65,4 @@ After that you can submit the request by running
     w24cli techread --ask-page-thumbnail ./your-file.pdf
 
 You should now see one or more images of the individual cuts on your Technical Drawing.
-Have a look at the additional details at the [CLI Documentation](/docs/cli/basic).
+Have a look at the additional details at the [CLI Documentation](./cli/basic).

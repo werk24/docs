@@ -32,7 +32,7 @@ To come back to our application:
     - W24AskSectionalThumbail() -- shows to the user that the individual sectionals have been separated correctly
     - W24AskVariantMeasures() -- delivers the complete information about the Measures (incl. tolerances)
 
-See [API/Asks](/docs/api/asks) for details.
+See [API/Asks](./api/asks) for details.
 
 ## Defining Hooks
 
@@ -46,7 +46,7 @@ The defintion is very simple:
     from werk24 import Hook,W24AskVariantMeasures
     hooks = [Hook(ask=W24AskVariantMeasures(), function=print)]
 
-For a full list of available asks, refer to [API/Asks](/docs/api/asks)
+For a full list of available asks, refer to [API/Asks](./api/asks)
 
 ## Submitting a Request
 
@@ -111,7 +111,7 @@ It has three "Sublclients" that deal with the different kind of endpoints.
 
 ### Authentication Client
 
-The Authentication Client allows you to obtain a JWT Token from AWS Cognito (see [Basics/Authentication](/docs/basics/authentication)). This Token needs to be added to each HTTPS and WSS request as `Authorization: Bearer ...` .
+The Authentication Client allows you to obtain a JWT Token from AWS Cognito (see [Basics/Authentication](./basics/authentication)). This Token needs to be added to each HTTPS and WSS request as `Authorization: Bearer ...` .
 Obtaining the Token is straight-foward, mainly because frameworks for many languages exist. See [Github/werk24/werk24-python/auth_client.py](https://github.com/werk24/werk24/blob/master/werk24/auth_client.py) for a python-based reference implementation.
 
 ### Techread HTTPS Client

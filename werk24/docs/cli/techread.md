@@ -1,6 +1,6 @@
 # Techread Subcommand
 
-The techread subcommand allows you to submit your Technical Drawing and ask Werk24 to return certain details about it. We call these details "asks". See [API/Asks](/docs/api/asks) for a more detailed description. While the API allows you to define your asks in a more granular way, the CLI will always request each ask with its default attributes.
+The techread subcommand allows you to submit your Technical Drawing and ask Werk24 to return certain details about it. We call these details "asks". See [API/Asks](./api/asks) for a more detailed description. While the API allows you to define your asks in a more granular way, the CLI will always request each ask with its default attributes.
 
 ## Available Commands
 

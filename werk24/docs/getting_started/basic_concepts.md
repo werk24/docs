@@ -11,9 +11,9 @@ The Werk24 API uses three simple concepts
 In order for us to process the file, you need to send it to our API in binary format. You just need to provide us with the binary version of the file and let us worry about the rest.
 
 
-![](/getting_started/supported_formats.png)
+![](./getting_started/supported_formats.png)
 
-See [API/Drawing Bytes](/api/drawing_bytes) for the list of supported file formats.
+See [API/Drawing Bytes](./api/drawing_bytes) for the list of supported file formats.
 
 ## Asks
 
