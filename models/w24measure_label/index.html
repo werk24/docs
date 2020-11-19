@@ -5,11 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<meta content="Werk24 Client and API documentation" name="description"/>
+<meta content="Extracting Information from Technical Drawings and Engineering Drawings made simple." name="description"/>
 <meta content="Dr. Jochen Mattes" name="author"/>
 <link href="../../assets/images/favicon.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.1.2, mkdocs-material-6.1.5" name="generator"/>
-<title>W24MeasureLabel - Werk24</title>
+<title>W24MeasureLabel - Werk24 - Documentation</title>
 <link href="../../assets/stylesheets/main.21aed14c.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.196e0c26.min.css" rel="stylesheet"/>
 <meta content="#000000" name="theme-color"/>
@@ -28,7 +28,7 @@
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header-nav md-grid">
-<a aria-label="Werk24" class="md-header-nav__button md-logo" href="../.." title="Werk24">
+<a aria-label="Werk24 - Documentation" class="md-header-nav__button md-logo" href="../.." title="Werk24 - Documentation">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"></path></svg>
 </a>
 <label class="md-header-nav__button md-icon" for="__drawer">
@@ -37,7 +37,7 @@
 <div class="md-header-nav__title" data-md-component="header-title">
 <div class="md-header-nav__ellipsis">
 <span class="md-header-nav__topic md-ellipsis">
-            Werk24
+            Werk24 - Documentation
           </span>
 <span class="md-header-nav__topic md-ellipsis">
             
@@ -84,10 +84,10 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Werk24" class="md-nav__button md-logo" href="../.." title="Werk24">
+<a aria-label="Werk24 - Documentation" class="md-nav__button md-logo" href="../.." title="Werk24 - Documentation">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"></path></svg>
 </a>
-    Werk24
+    Werk24 - Documentation
   </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--nested">
@@ -188,6 +188,11 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="../w24chamfer/">
+      W24Chamfer
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../w24measure/">
       W24Measure
     </a>
@@ -206,6 +211,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../w24size_tolerance/">
       W24SizeTolerance
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../w24thread/">
+      W24Thread
     </a>
 </li>
 </ul>
@@ -249,39 +259,39 @@
 <tr>
 <th>PAYLOAD DICT</th>
 <th></th>
-<th>Example</th>
+<th>EXAMPLE</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>blurb</td>
-<td>str -- String representation of the item for human consumption</td>
+<td>blurb<br/>(<code>str</code>)</td>
+<td>String representation of the item for human consumption</td>
 <td>17k6</td>
 </tr>
 <tr>
-<td>size</td>
-<td><code>W24Size</code> -- Size of the MeasureLabel. Any of <code>W24SizeNominal</code>,<code>W24SizeDiameter</code>, and <code>W24SizeAccrossFlats</code></td>
-<td>See <a href="./models/w24size">W24Size</a>  for details</td>
+<td>size <br/>(<code>W24Size</code>)</td>
+<td>Size of the MeasureLabel. Any of <code>W24SizeNominal</code>,<code>W24SizeDiameter</code>, and <code>W24SizeAccrossFlats</code></td>
+<td>See <a href="../w24size/">W24Size</a>  for details</td>
 </tr>
 <tr>
-<td>size_tolerance</td>
-<td><code>W24SizeTolerance</code> -- Tolerance details. Default: General tolerances. NOTE: by default we are refering to the general tolerances of the drawing. Currently the W24SizeToleranceGeneral object is a stub. Future implementations might go one step further and quote the applicable general tolerance as refered to in the data fields. NOTE: if the W24MeasureLabel describes a "Theoretically Exact Measure", i.e, the label is surrounded by a box, like: "[15]", the size_tolerance refers to a W24SizeToleranceTheoreticallyExact object (and is NOT None)</td>
-<td>See <a href="./models/w24size_tolerance">W24SizeTolerance</a> ` for details</td>
+<td>size_tolerance <br/>(<code>W24SizeTolerance</code>)</td>
+<td>Tolerance details. Default: General tolerances. <br/><br/>NOTE: by default we are refering to the general tolerances of the drawing. Currently the W24SizeToleranceGeneral object is a stub. Future implementations might go one step further and quote the applicable general tolerance as refered to in the data fields. <br/><br/>NOTE: if the W24MeasureLabel describes a "Theoretically Exact Measure", i.e, the label is surrounded by a box, like: "[15]", the size_tolerance refers to a W24SizeToleranceTheoreticallyExact object (and is NOT None)</td>
+<td>See <a href="../w24size_tolerance/">W24SizeTolerance</a> for details</td>
 </tr>
 <tr>
-<td>thread</td>
-<td><code>W24Thread</code> -- NOTE: the thread details describe the complete thread description and follow the respective standards. In consequence, the thread diameter of an ISO-thread will be indicated in millimeter, while the thread diameter of an UTS thread will be in inch.</td>
-<td>See <a href="./models/w24thread">W24Thread</a> for details</td>
+<td>thread <br/>(<code>W24Thread</code>)</td>
+<td>NOTE: the thread details describe the complete thread description and follow the respective standards. In consequence, the thread diameter of an ISO-thread will be indicated in millimeter, while the thread diameter of an UTS thread will be in inch.</td>
+<td>See <a href="../w24thread/">W24Thread</a> for details</td>
 </tr>
 <tr>
-<td>quantity</td>
-<td>int -- Quantity for spacings.  NOTE: Currently only the indicated measure will be detected and returned. Future implementation could detect the spacings and return individual measures for the respective spacings. When we implement this feature, we will add an attribute to the ASK, which allows you to control the behavior.</td>
+<td>quantity <br/>(<code>int</code>)</td>
+<td>Quantity for spacings.  <br/><br/>NOTE: Currently only the indicated measure will be detected and returned. Future implementation could detect the spacings and return individual measures for the respective spacings. When we implement this feature, we will add an attribute to the ASK, which allows you to control the behavior.</td>
 <td>Ø2.5 (2x) will yield quantity=2</td>
 </tr>
 <tr>
-<td>chamfer</td>
-<td><code>W24Chamfer</code> -- Optional Chamfer</td>
-<td>See <a href="./models/w24chamfer">W24Chamfer</a> for details</td>
+<td>chamfer <br/>(<code>W24Chamfer</code>)</td>
+<td>Optional Chamfer</td>
+<td>See <a href="../w24chamfer/">W24Chamfer</a> for details</td>
 </tr>
 </tbody>
 </table>

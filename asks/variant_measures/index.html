@@ -5,11 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<meta content="Werk24 Client and API documentation" name="description"/>
+<meta content="Extracting Information from Technical Drawings and Engineering Drawings made simple." name="description"/>
 <meta content="Dr. Jochen Mattes" name="author"/>
 <link href="../../assets/images/favicon.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.1.2, mkdocs-material-6.1.5" name="generator"/>
-<title>Variant / Measures - Werk24</title>
+<title>Variant / Measures - Werk24 - Documentation</title>
 <link href="../../assets/stylesheets/main.21aed14c.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.196e0c26.min.css" rel="stylesheet"/>
 <meta content="#000000" name="theme-color"/>
@@ -31,7 +31,7 @@
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header-nav md-grid">
-<a aria-label="Werk24" class="md-header-nav__button md-logo" href="../.." title="Werk24">
+<a aria-label="Werk24 - Documentation" class="md-header-nav__button md-logo" href="../.." title="Werk24 - Documentation">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"></path></svg>
 </a>
 <label class="md-header-nav__button md-icon" for="__drawer">
@@ -40,7 +40,7 @@
 <div class="md-header-nav__title" data-md-component="header-title">
 <div class="md-header-nav__ellipsis">
 <span class="md-header-nav__topic md-ellipsis">
-            Werk24
+            Werk24 - Documentation
           </span>
 <span class="md-header-nav__topic md-ellipsis">
             
@@ -87,10 +87,10 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Werk24" class="md-nav__button md-logo" href="../.." title="Werk24">
+<a aria-label="Werk24 - Documentation" class="md-nav__button md-logo" href="../.." title="Werk24 - Documentation">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"></path></svg>
 </a>
-    Werk24
+    Werk24 - Documentation
   </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--nested">
@@ -192,8 +192,8 @@
 <nav aria-label="W24Variant" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#w24variantmeasures">
-    W24VariantMeasures
+<a class="md-nav__link" href="#w24askvariantmeasures">
+    W24AskVariantMeasures
   </a>
 </li>
 </ul>
@@ -218,6 +218,11 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../models/w24chamfer/">
+      W24Chamfer
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../models/w24measure/">
       W24Measure
     </a>
@@ -235,6 +240,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../models/w24size_tolerance/">
       W24SizeTolerance
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../models/w24thread/">
+      W24Thread
     </a>
 </li>
 </ul>
@@ -286,8 +296,8 @@
 <nav aria-label="W24Variant" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#w24variantmeasures">
-    W24VariantMeasures
+<a class="md-nav__link" href="#w24askvariantmeasures">
+    W24AskVariantMeasures
   </a>
 </li>
 </ul>
@@ -303,45 +313,59 @@
 <h1>Variant / Measures</h1>
 <h2 id="w24variant">W24Variant<a class="headerlink" href="#w24variant" title="Permanent link">¶</a></h2>
 <p>Each sheet may describe one or more Variants, depending on the precense of a W24VariantTable. In most cases a Technical Drawing will only describe one Variant (i.e., one Part), but we see W24VariantTables in about 2-5% of the files. So be sure to implement the handling of multiple variants.</p>
-<h3 id="w24variantmeasures">W24VariantMeasures<a class="headerlink" href="#w24variantmeasures" title="Permanent link">¶</a></h3>
+<h3 id="w24askvariantmeasures">W24AskVariantMeasures<a class="headerlink" href="#w24askvariantmeasures" title="Permanent link">¶</a></h3>
+<p>W24AskVariantMeasures return a list of all measures that we were able to detect on the Technical Drawing. The API will return one response for every variant-sectional. When you process the response, you need to be aware that </p>
+<ul>
+<li>each document can have multiple pages,</li>
+<li>each page can have multiple sheets,</li>
+<li>each sheet can have multiple canvases,</li>
+<li>each canvas can have multiple variants, and</li>
+<li>each variant can have multiple sectionals </li>
+</ul>
+<p>As result, you will <code>#Pages x #Sheets x #Canvases x #Variants x #Sectionals</code> responses to your ask.</p>
 <table>
 <thead>
 <tr>
 <th>PAYLOAD DICT</th>
 <th></th>
-<th>Example</th>
+<th>EXAMPLE</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>document_id</td>
-<td><code>UUID4</code> -- Unique <code>UUID</code> that identifies the document</td>
+<td>document_id <br/>(<code>UUID4</code>)</td>
+<td>Unique <code>UUID</code> that identifies the document</td>
 <td>"44200f9b-1bb6-48bc-9370-de8a28e8dbbb"</td>
 </tr>
 <tr>
-<td>page_id</td>
-<td><code>UUID4</code> -- Unqiue <code>UUID</code> that identifies the page</td>
+<td>page_id <br/>(<code>UUID4</code>)</td>
+<td>Unqiue <code>UUID</code> that identifies the page</td>
 <td>"89f54424-343e-4fd5-8b7d-e09ea5f310fd"</td>
 </tr>
 <tr>
-<td>sheet_id</td>
-<td><code>UUID4</code> -- Unqiue <code>UUID</code> that identifies the sheet</td>
+<td>sheet_id <br/>(<code>UUID4</code>)</td>
+<td>Unqiue <code>UUID</code> that identifies the sheet</td>
 <td>"5bc164d4-df0d-4482-9048-3a84de010abf"</td>
 </tr>
 <tr>
-<td>canvas_id</td>
-<td><code>UUID4</code> -- Unqiue <code>UUID</code> that identifies the canvas</td>
+<td>canvas_id <br/>(<code>UUID4</code>)</td>
+<td>Unqiue <code>UUID</code> that identifies the canvas</td>
 <td>"9e6399a6-0b43-4b47-a416-0918254bba16"</td>
 </tr>
 <tr>
-<td>variant_id</td>
-<td><code>UUID4</code> -- Unqiue <code>UUID</code> that identifies the variant</td>
+<td>variant_id <br/>(<code>UUID4</code>)</td>
+<td>Unqiue <code>UUID</code> that identifies the variant</td>
 <td>"2680c8ca-6c74-4665-b293-02552d4f00a5</td>
 </tr>
 <tr>
-<td>measures</td>
-<td>List[W24Measure] <br/> List of all the Measures that were detected on the Sectional</td>
-<td>See <a href="./models/w24measure">Models/W24Measure</a></td>
+<td>sectional_id <br/>(<code>UUID4</code>)</td>
+<td>Unqiue <code>UUID</code> that identifies the sectional</td>
+<td>"7c02d5cf-2939-443f-a399-2d8ea2fffaa3"</td>
+</tr>
+<tr>
+<td>measures <br/>(<code>List[W24Measure]</code>)</td>
+<td>List of all the Measures that were detected on the Sectional</td>
+<td>See <a href="../../models/w24measure/">Models/W24Measure</a></td>
 </tr>
 </tbody>
 </table>
@@ -365,13 +389,13 @@
               </div>
 </div>
 </a>
-<a class="md-footer-nav__link md-footer-nav__link--next" href="../../models/w24measure/" rel="next">
+<a class="md-footer-nav__link md-footer-nav__link--next" href="../../models/w24chamfer/" rel="next">
 <div class="md-footer-nav__title">
 <div class="md-ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                W24Measure
+                W24Chamfer
               </div>
 </div>
 <div class="md-footer-nav__button md-icon">

@@ -5,11 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<meta content="Werk24 Client and API documentation" name="description"/>
+<meta content="Extracting Information from Technical Drawings and Engineering Drawings made simple." name="description"/>
 <meta content="Dr. Jochen Mattes" name="author"/>
 <link href="../../assets/images/favicon.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.1.2, mkdocs-material-6.1.5" name="generator"/>
-<title>W24Measure - Werk24</title>
+<title>W24Measure - Werk24 - Documentation</title>
 <link href="../../assets/stylesheets/main.21aed14c.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.196e0c26.min.css" rel="stylesheet"/>
 <meta content="#000000" name="theme-color"/>
@@ -28,7 +28,7 @@
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header-nav md-grid">
-<a aria-label="Werk24" class="md-header-nav__button md-logo" href="../.." title="Werk24">
+<a aria-label="Werk24 - Documentation" class="md-header-nav__button md-logo" href="../.." title="Werk24 - Documentation">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"></path></svg>
 </a>
 <label class="md-header-nav__button md-icon" for="__drawer">
@@ -37,7 +37,7 @@
 <div class="md-header-nav__title" data-md-component="header-title">
 <div class="md-header-nav__ellipsis">
 <span class="md-header-nav__topic md-ellipsis">
-            Werk24
+            Werk24 - Documentation
           </span>
 <span class="md-header-nav__topic md-ellipsis">
             
@@ -84,10 +84,10 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Werk24" class="md-nav__button md-logo" href="../.." title="Werk24">
+<a aria-label="Werk24 - Documentation" class="md-nav__button md-logo" href="../.." title="Werk24 - Documentation">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"></path></svg>
 </a>
-    Werk24
+    Werk24 - Documentation
   </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--nested">
@@ -187,6 +187,11 @@
         MODELS
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../w24chamfer/">
+      W24Chamfer
+    </a>
+</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
 <a class="md-nav__link md-nav__link--active" href="./">
@@ -206,6 +211,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../w24size_tolerance/">
       W24SizeTolerance
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../w24thread/">
+      W24Thread
     </a>
 </li>
 </ul>
@@ -249,33 +259,33 @@
 <tr>
 <th>PAYLOAD DICT</th>
 <th></th>
-<th>Example</th>
+<th>EXAMPLE</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>measure_id</td>
-<td><code>UUID4</code> -- Unqiue <code>UUID</code> that identifies the measure</td>
+<td>measure_id <br/>(<code>UUID4</code>)</td>
+<td>Unqiue <code>UUID</code> that identifies the measure</td>
 <td>"15012f90-f755-48cf-b121-7542e88b9ec8"</td>
 </tr>
 <tr>
-<td>line</td>
-<td><code>Tuple[Tuple[float,float],Tuple[float,float]]</code> -- Tuple of the measure's start- and end-coordinates in the Pixel Coordinate system of the sectional. The coordinates are normalized by the width and height of the associated object (e.g., the sectional). If you want to obtain the absolute position in the original image, you need to consider the following offsets: sectional + canvas + sheet.</td>
+<td>line <br/>(<code>Tuple[Tuple[float,float],Tuple[float,float]]</code>)</td>
+<td>Tuple of the measure's start- and end-coordinates in the Pixel Coordinate system of the sectional. The coordinates are normalized by the width and height of the associated object (e.g., the sectional). If you want to obtain the absolute position in the original image, you need to consider the following offsets: sectional + canvas + sheet.</td>
 <td>((0.1,0.5),(0.2,0.5))</td>
 </tr>
 <tr>
-<td>label</td>
-<td><code>W24MeasureLabel</code> -- Details on the Measure Label</td>
-<td>See <a href="./models/w24measure_label">W24MeasureLabel</a></td>
+<td>label<br/>(<code>W24MeasureLabel</code>)</td>
+<td>Details on the Measure Label</td>
+<td>See <a href="../w24measure_label/">W24MeasureLabel</a></td>
 </tr>
 <tr>
-<td>warnings</td>
-<td><code>List[W24MeasureWarning]</code> - List of Warnings that are associated with the measure. See W24MeasureWarning for details</td>
+<td>warnings<br/>(<code>List[W24MeasureWarning]</code>)</td>
+<td>- List of Warnings that are associated with the measure. See W24MeasureWarning for details</td>
 <td>[]</td>
 </tr>
 <tr>
-<td>confidence</td>
-<td><code>float</code> - Werk24 calculates an internal confidence score for each measure. Depending on your use-case, you might want to consider or discard low-confidence measures. This value allows you to do so. The value ranges from 0.0 to 1.0</td>
+<td>confidence<br/>(<code>float</code>)</td>
+<td>- Werk24 calculates an internal confidence score for each measure. Depending on your use-case, you might want to consider or discard low-confidence measures. This value allows you to do so. The value ranges from 0.0 to 1.0</td>
 <td>0.93</td>
 </tr>
 </tbody>
@@ -287,7 +297,7 @@
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav aria-label="Footer" class="md-footer-nav__inner md-grid">
-<a class="md-footer-nav__link md-footer-nav__link--prev" href="../../asks/variant_measures/" rel="prev">
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="../w24chamfer/" rel="prev">
 <div class="md-footer-nav__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -296,7 +306,7 @@
 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Variant / Measures
+                W24Chamfer
               </div>
 </div>
 </a>

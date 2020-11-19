@@ -5,11 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<meta content="Werk24 Client and API documentation" name="description"/>
+<meta content="Extracting Information from Technical Drawings and Engineering Drawings made simple." name="description"/>
 <meta content="Dr. Jochen Mattes" name="author"/>
 <link href="../../assets/images/favicon.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.1.2, mkdocs-material-6.1.5" name="generator"/>
-<title>W24thread - Werk24</title>
+<title>W24Thread - Werk24 - Documentation</title>
 <link href="../../assets/stylesheets/main.21aed14c.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.196e0c26.min.css" rel="stylesheet"/>
 <meta content="#000000" name="theme-color"/>
@@ -31,7 +31,7 @@
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header-nav md-grid">
-<a aria-label="Werk24" class="md-header-nav__button md-logo" href="../.." title="Werk24">
+<a aria-label="Werk24 - Documentation" class="md-header-nav__button md-logo" href="../.." title="Werk24 - Documentation">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"></path></svg>
 </a>
 <label class="md-header-nav__button md-icon" for="__drawer">
@@ -40,11 +40,11 @@
 <div class="md-header-nav__title" data-md-component="header-title">
 <div class="md-header-nav__ellipsis">
 <span class="md-header-nav__topic md-ellipsis">
-            Werk24
+            Werk24 - Documentation
           </span>
 <span class="md-header-nav__topic md-ellipsis">
             
-              W24thread
+              W24Thread
             
           </span>
 </div>
@@ -87,10 +87,10 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Werk24" class="md-nav__button md-logo" href="../.." title="Werk24">
+<a aria-label="Werk24 - Documentation" class="md-nav__button md-logo" href="../.." title="Werk24 - Documentation">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"></path></svg>
 </a>
-    Werk24
+    Werk24 - Documentation
   </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--nested">
@@ -178,8 +178,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
 <label class="md-nav__link" for="nav-4">
       MODELS
       <span class="md-nav__icon md-icon"></span>
@@ -190,6 +190,11 @@
         MODELS
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../w24chamfer/">
+      W24Chamfer
+    </a>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../w24measure/">
       W24Measure
@@ -209,6 +214,39 @@
 <a class="md-nav__link" href="../w24size_tolerance/">
       W24SizeTolerance
     </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+        W24Thread
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+      W24Thread
+    </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#w24threadisometric">
+    W24ThreadISOMetric
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#w24threaduts">
+    W24ThreadUTS
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#w24threadwhitworth">
+    W24ThreadWhitworth
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -274,48 +312,48 @@
 </div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
-<h1>W24thread</h1>
+<h1>W24Thread</h1>
 <h2 id="w24threadisometric">W24ThreadISOMetric<a class="headerlink" href="#w24threadisometric" title="Permanent link">¶</a></h2>
-<p>Metric ISO Thread following ISO 1502
-Supports</p>
+<p>Metric ISO Thread following <a href="https://www.beuth.de/de/norm/din-iso-1502/2872869">ISO 1502</a></p>
+<p>Supports:</p>
 <ul>
-<li>DIN 14-1 threads (i.e., diameter &lt; 1mm)</li>
-<li>DIN 13-1 threads (i.e., diameter 1..68mm)</li>
-<li>DIN 13-2 to DIN 13-10 threads (i.e., diameter 1..1000mm)</li>
-<li>DIN 158-1 (i.e., cone-shaped threads)</li>
+<li><a href="https://www.beuth.de/de/norm/din-14-1/1338963">DIN 14-1</a> threads (i.e., diameter &lt; 1mm)</li>
+<li><a href="https://www.beuth.de/de/norm/din-13-1/17218832">DIN 13-1</a> threads (i.e., diameter 1..68mm)</li>
+<li><a href="https://www.beuth.de/de/norm/din-13-2/17218741">DIN 13-2</a> to <a href="https://www.beuth.de/de/norm/din-13-10/17217287">DIN 13-10</a> threads (i.e., diameter 1..1000mm)</li>
+<li><a href="https://www.beuth.de/de/norm/din-158-1/2965445">DIN 158-1</a> (i.e., cone-shaped threads)</li>
 </ul>
 <table>
 <thead>
 <tr>
 <th>PAYLOAD DICT</th>
 <th></th>
-<th>Example</th>
+<th>EXAMPLE</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>blurb</td>
-<td><code>str</code> -- string representation for human interpretation</td>
+<td><code>str</code> <br/><br/> string representation for human interpretation</td>
 <td>M4x1.5</td>
 </tr>
 <tr>
 <td>thread_type</td>
-<td><code>W24ThreadType</code> -- thread type to facilitate deserialization</td>
+<td><code>W24ThreadType</code> <br/><br/> thread type to facilitate deserialization</td>
 <td>ISO_METRIC</td>
 </tr>
 <tr>
 <td>diameter</td>
-<td><code>float</code> -- Diameter of the thread in mm. <br/><br/>NOTE: The norms range from 0.1 to 1000mm; however, diameters outside that range are possible (and occur)</td>
+<td><code>float</code> <br/><br/> Diameter of the thread in mm. <br/><br/>NOTE: The norms range from 0.1 to 1000mm; however, diameters outside that range are possible (and occur)</td>
 <td>4</td>
 </tr>
 <tr>
 <td>pitch</td>
-<td><code>float</code> -- Pitch of the thread in mm. Normed range: 0.25 - 9mm. <br/> <br/>NOTE: the value will only be set if is explicitly stated in the drawing. This behaviour might change in the future and perform an automatic lookup in the DIN standards. If this change would affect your application, please get in touch with us.</td>
+<td><code>float</code> <br/><br/> Pitch of the thread in mm. Normed range: 0.25 - 9mm. <br/> <br/>NOTE: the value will only be set if is explicitly stated in the drawing. This behaviour might change in the future and perform an automatic lookup in the DIN standards. If this change would affect your application, please get in touch with us.</td>
 <td>1.5</td>
 </tr>
 <tr>
 <td>handedness</td>
-<td><code>W24ThreadHandedness</code> -- Left of right-handedness of the thread. This will be RIGHT unless explicitly described as LEFT in the drawing</td>
+<td><code>W24ThreadHandedness</code> <br/><br/> Left of right-handedness of the thread. This will be RIGHT unless explicitly described as LEFT in the drawing</td>
 <td>W24ThreadHandedness.RIGHT</td>
 </tr>
 </tbody>
@@ -332,28 +370,28 @@ Supports</p>
 <tr>
 <th>PAYLOAD DICT</th>
 <th></th>
-<th>Example</th>
+<th>EXAMPLE</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>blurb</td>
-<td><code>str</code> -- string representation for human interpretation</td>
+<td><code>str</code> <br/><br/> string representation for human interpretation</td>
 <td>#0, 1 3/4"</td>
 </tr>
 <tr>
 <td>thread_type</td>
-<td><code>W24ThreadType</code> -- thread type to facilitate deserialization</td>
+<td><code>W24ThreadType</code> <br/><br/> thread type to facilitate deserialization</td>
 <td>UTS_COARSE / UTS_FINE / UTS_EXTRAFINE / UTS_SPECIAL</td>
 </tr>
 <tr>
 <td>uts_size</td>
-<td><code>str</code> -- UTS size as string representation. Threads with a diameter &lt; 0.25 inch are written with a leading '#'. Threads with a diameter &gt;= 0.25 inch are represented as fractions with a tailing '"'</td>
+<td><code>str</code> <br/><br/> UTS size as string representation. Threads with a diameter &lt; 0.25 inch are written with a leading '#'. Threads with a diameter &gt;= 0.25 inch are represented as fractions with a tailing '"'</td>
 <td>#0, 1 3/4"</td>
 </tr>
 <tr>
 <td>diameter</td>
-<td><code>float</code> -- Diameter of the thread in mm.</td>
+<td><code>float</code> <br/><br/> Diameter of the thread in mm.</td>
 <td>4</td>
 </tr>
 <tr>
@@ -363,7 +401,7 @@ Supports</p>
 </tr>
 <tr>
 <td>tolerance_class</td>
-<td><code>str</code> -- Tolerance class. Options:  1A, 2A, 3A for external threads and 1B, 2B, 3B for internal threads</td>
+<td><code>str</code> <br/><br/> Tolerance class. Options:  1A, 2A, 3A for external threads and 1B, 2B, 3B for internal threads</td>
 <td>1A</td>
 </tr>
 </tbody>
@@ -375,28 +413,28 @@ Supports</p>
 <tr>
 <th>PAYLOAD DICT</th>
 <th></th>
-<th>Example</th>
+<th>EXAMPLE</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>blurb</td>
-<td><code>str</code> -- string representation for human interpretation</td>
+<td><code>str</code> <br/><br/> string representation for human interpretation</td>
 <td>G3/4</td>
 </tr>
 <tr>
 <td>thread_type</td>
-<td><code>W24ThreadType</code> -- thread type to facilitate deserialization</td>
+<td><code>W24ThreadType</code> <br/><br/> thread type to facilitate deserialization</td>
 <td>WHITWORTH</td>
 </tr>
 <tr>
 <td>diameter</td>
-<td><code>float</code> -- Diameter of the thread in mm.</td>
+<td><code>float</code> <br/><br/> Diameter of the thread in mm.</td>
 <td>4</td>
 </tr>
 <tr>
 <td>whitworth_size</td>
-<td><code>float</code> --  Size number (for historic reasons not proportional to size)</td>
+<td><code>float</code> <br/><br/>  Size number (for historic reasons not proportional to size)</td>
 <td>0.75</td>
 </tr>
 </tbody>
@@ -406,6 +444,36 @@ Supports</p>
 </div>
 </main>
 <footer class="md-footer">
+<div class="md-footer-nav">
+<nav aria-label="Footer" class="md-footer-nav__inner md-grid">
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="../w24size_tolerance/" rel="prev">
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                W24SizeTolerance
+              </div>
+</div>
+</a>
+<a class="md-footer-nav__link md-footer-nav__link--next" href="../../cli/basic/" rel="next">
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Basic
+              </div>
+</div>
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+</div>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-footer-copyright">

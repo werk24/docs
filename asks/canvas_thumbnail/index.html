@@ -5,11 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<meta content="Werk24 Client and API documentation" name="description"/>
+<meta content="Extracting Information from Technical Drawings and Engineering Drawings made simple." name="description"/>
 <meta content="Dr. Jochen Mattes" name="author"/>
 <link href="../../assets/images/favicon.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.1.2, mkdocs-material-6.1.5" name="generator"/>
-<title>Canvas / Thumbnail - Werk24</title>
+<title>Canvas / Thumbnail - Werk24 - Documentation</title>
 <link href="../../assets/stylesheets/main.21aed14c.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.196e0c26.min.css" rel="stylesheet"/>
 <meta content="#000000" name="theme-color"/>
@@ -31,7 +31,7 @@
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header-nav md-grid">
-<a aria-label="Werk24" class="md-header-nav__button md-logo" href="../.." title="Werk24">
+<a aria-label="Werk24 - Documentation" class="md-header-nav__button md-logo" href="../.." title="Werk24 - Documentation">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"></path></svg>
 </a>
 <label class="md-header-nav__button md-icon" for="__drawer">
@@ -40,7 +40,7 @@
 <div class="md-header-nav__title" data-md-component="header-title">
 <div class="md-header-nav__ellipsis">
 <span class="md-header-nav__topic md-ellipsis">
-            Werk24
+            Werk24 - Documentation
           </span>
 <span class="md-header-nav__topic md-ellipsis">
             
@@ -87,10 +87,10 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Werk24" class="md-nav__button md-logo" href="../.." title="Werk24">
+<a aria-label="Werk24 - Documentation" class="md-nav__button md-logo" href="../.." title="Werk24 - Documentation">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"></path></svg>
 </a>
-    Werk24
+    Werk24 - Documentation
   </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--nested">
@@ -218,6 +218,11 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../models/w24chamfer/">
+      W24Chamfer
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../models/w24measure/">
       W24Measure
     </a>
@@ -235,6 +240,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../models/w24size_tolerance/">
       W24SizeTolerance
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../models/w24thread/">
+      W24Thread
     </a>
 </li>
 </ul>
@@ -312,28 +322,28 @@ contain 2 or more Canvases. When you request a W24AskCanvasThumbnail, be sure to
 <tr>
 <th>PAYLOAD DICT</th>
 <th></th>
-<th>Example</th>
+<th>EXAMPLE</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>document_id</td>
-<td><code>UUID4</code> -- Unique <code>UUID</code> that identifies the document</td>
+<td>document_id <br/>(<code>UUID4</code>)</td>
+<td>Unique <code>UUID</code> that identifies the document</td>
 <td>"44200f9b-1bb6-48bc-9370-de8a28e8dbbb"</td>
 </tr>
 <tr>
-<td>page_id</td>
-<td><code>UUID4</code> -- Unqiue <code>UUID</code> that identifies the page</td>
+<td>page_id <br/>(<code>UUID4</code>)</td>
+<td>Unqiue <code>UUID</code> that identifies the page</td>
 <td>"89f54424-343e-4fd5-8b7d-e09ea5f310fd"</td>
 </tr>
 <tr>
-<td>sheet_id</td>
-<td><code>UUID4</code> -- Unqiue <code>UUID</code> that identifies the sheet</td>
+<td>sheet_id <br/>(<code>UUID4</code>)</td>
+<td>Unqiue <code>UUID</code> that identifies the sheet</td>
 <td>"5bc164d4-df0d-4482-9048-3a84de010abf"</td>
 </tr>
 <tr>
-<td>canvas_id</td>
-<td><code>UUID4</code> -- Unqiue <code>UUID</code> that identifies the canvas</td>
+<td>canvas_id <br/>(<code>UUID4</code>)</td>
+<td>Unqiue <code>UUID</code> that identifies the canvas</td>
 <td>"9e6399a6-0b43-4b47-a416-0918254bba16"</td>
 </tr>
 </tbody>
@@ -343,14 +353,14 @@ contain 2 or more Canvases. When you request a W24AskCanvasThumbnail, be sure to
 <tr>
 <th>PAYLOAD URL</th>
 <th></th>
-<th>Example</th>
+<th>EXAMPLE</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>url</td>
-<td>str -- Url of the payload (requires token authentication)</td>
-<td>Example: https://techread.w24.io/download/1a0230ea-4a96-4522-ae8e-a25aed463a3e</td>
+<td>url<br/>(<code>HttpUrl</code>)</td>
+<td>Url of the payload (requires token authentication)</td>
+<td>https://techread.w24.io/download/1a0230ea-4a96-4522-ae8e-a25aed463a3e</td>
 </tr>
 </tbody>
 </table>
