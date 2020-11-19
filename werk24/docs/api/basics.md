@@ -100,5 +100,5 @@ An easy example are the units in W24AskVariantOverallDimensions. Currently we qu
 ### The Python Client
 
 To make your life as developer as easy as possible, we have implemented a reference client in python.
-See [API/TechreadClient](./api/techread-client) for details.
+See [API/TechreadClient](../api/techread-client) for details.
 

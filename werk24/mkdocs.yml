@@ -1,5 +1,5 @@
-site_name: "Werk24"
-site_description: "Werk24 Client and API documentation"
+site_name: "Werk24 - Documentation"
+site_description: "Extracting Information from Technical Drawings and Engineering Drawings made simple."
 site_author: "Dr. Jochen Mattes"
 
 copyright: "Copyright &copy; 2020 Werk24"
@@ -8,6 +8,7 @@ nav:
   - GETTING STARTED:
       - Welcome: index.md
       - Basic Concepts: getting_started/basic_concepts.md
+      
   - TUTORIALS:
       - Thumbnails: tutorials/thumbnails.md
 
@@ -19,10 +20,12 @@ nav:
       - Variant / Measures: asks/variant_measures.md
 
   - MODELS:
+      - W24Chamfer: models/w24chamfer.md
       - W24Measure: models/w24measure.md
       - W24MeasureLabel: models/w24measure_label.md
       - W24Size: models/w24size.md
       - W24SizeTolerance: models/w24size_tolerance.md
+      - W24Thread: models/w24thread.md
     
   - CLI:
       - Basic: cli/basic.md
@@ -33,9 +36,6 @@ theme:
     primary: "black"
     accent: "blue"
   language: "en"
-  feature:
-    tabs: true
-  # sticky_navigation: true
 
 # Extensions
 markdown_extensions:

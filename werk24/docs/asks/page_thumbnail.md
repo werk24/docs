@@ -14,12 +14,12 @@ The Page Thumbnail will differs from the original Document in serveral ways:
 1. It is _converted to grayscale_, i.e, no matter how colorful the original drawing was, you will always receive a grayscale image in response. Please let us know if you need to have the colorized image; we are happy to add a parameter to the Ask.
 2. It is _denoised_, i.e, various kinds of noise will have been removed
 
-| PAYLOAD DICT |                                                      | Example                                       |
+| PAYLOAD DICT |                                                      | EXAMPLE                                      |
 | ------------ | -----------------------------------------------------|---------------------------------------------- |
-| document_id  | `UUID4` -- Unique `UUID` that identifies the document    |  "44200f9b-1bb6-48bc-9370-de8a28e8dbbb"       |
-| page_id      | `UUID4` -- Unqiue `UUID` that identifies the page        |  "89f54424-343e-4fd5-8b7d-e09ea5f310fd"       |
+| document_id <br/>(`UUID4`) |Unique `UUID` that identifies the document    |  "44200f9b-1bb6-48bc-9370-de8a28e8dbbb"       |
+| page_id <br/>(`UUID4`) |Unqiue `UUID` that identifies the page        |  "89f54424-343e-4fd5-8b7d-e09ea5f310fd"       |
 
-| PAYLOAD URL |                                                       | Example                                       |
+| PAYLOAD URL |                                                       | EXAMPLE                                      |
 | ----------- | ------------------------------------------------------|---------------------------------------------- |
-| url         | str -- Url of the payload (requires token authentication) | https://techread.w24.io/download/1a0230ea-4a96-4522-ae8e-a25aed463a3e |
+| url<br/>(`HttpUrl`)   | Url of the payload (requires token authentication) | https://techread.w24.io/download/1a0230ea-4a96-4522-ae8e-a25aed463a3e |
 

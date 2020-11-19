@@ -14,10 +14,10 @@ The thumbnail will be rotated automatically.
 
 | PAYLOAD DICT |                                                                                                       |
 | ------------ | ----------------------------------------------------------------------------------------------------- |
-| document_id  | `UUID4` -- Example: "44200f9b-1bb6-48bc-9370-de8a28e8dbbb"<br>Unique `UUID` that identifies the document  |
-| page_id      | `UUID4` -- Example: "89f54424-343e-4fd5-8b7d-e09ea5f310fd"<br>Unqiue `UUID` that identifies the page      |
-| sheet_id     | `UUID4` -- Example: "5bc164d4-df0d-4482-9048-3a84de010abf"<br>Unqiue `UUID` that identifies the sheet     |
-| sectional_id | `UUID4` -- Example: "ba72f9f1-918a-43c9-8178-095ff9910024"<br>Unqiue `UUID` that identifies the sectional |
+| document_id <br/>(`UUID4`) |Example: "44200f9b-1bb6-48bc-9370-de8a28e8dbbb"<br>Unique `UUID` that identifies the document  |
+| page_id <br/>(`UUID4`) |Example: "89f54424-343e-4fd5-8b7d-e09ea5f310fd"<br>Unqiue `UUID` that identifies the page      |
+| sheet_id <br/>(`UUID4`) |Example: "5bc164d4-df0d-4482-9048-3a84de010abf"<br>Unqiue `UUID` that identifies the sheet     |
+| sectional_id <br/>(`UUID4`) |Example: "ba72f9f1-918a-43c9-8178-095ff9910024"<br>Unqiue `UUID` that identifies the sectional |
 
 | PAYLOAD URL |                                                                                        |
 | ----------- | -------------------------------------------------------------------------------------- |

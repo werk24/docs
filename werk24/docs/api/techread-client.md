@@ -32,7 +32,7 @@ To come back to our application:
     - W24AskSectionalThumbail() -- shows to the user that the individual sectionals have been separated correctly
     - W24AskVariantMeasures() -- delivers the complete information about the Measures (incl. tolerances)
 
-See [API/Asks](./api/asks) for details.
+See [API/Asks](../api/asks) for details.
 
 ## Defining Hooks
 
@@ -46,7 +46,7 @@ The defintion is very simple:
     from werk24 import Hook,W24AskVariantMeasures
     hooks = [Hook(ask=W24AskVariantMeasures(), function=print)]
 
-For a full list of available asks, refer to [API/Asks](./api/asks)
+For a full list of available asks, refer to [API/Asks](../api/asks)
 
 ## Submitting a Request
 

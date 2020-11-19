@@ -340,7 +340,7 @@ client = W24TechreadClient.make_from_env()
 </ul>
 </li>
 </ol>
-<p>See <a href="/docs/api/asks">API/Asks</a> for details.</p>
+<p>See <a href="./api/asks">API/Asks</a> for details.</p>
 <h2 id="defining-hooks">Defining Hooks<a class="headerlink" href="#defining-hooks" title="Permanent link">¶</a></h2>
 <p>To make your life as developer as easy as possible, we introduced a small <code>Hook</code> object that allows you to define</p>
 <ol>
@@ -351,7 +351,7 @@ client = W24TechreadClient.make_from_env()
 <div class="codehilite"><pre><span></span><code>from werk24 import Hook,W24AskVariantMeasures
 hooks = [Hook(ask=W24AskVariantMeasures(), function=print)]
 </code></pre></div>
-<p>For a full list of available asks, refer to <a href="/docs/api/asks">API/Asks</a></p>
+<p>For a full list of available asks, refer to <a href="./api/asks">API/Asks</a></p>
 <h2 id="submitting-a-request">Submitting a Request<a class="headerlink" href="#submitting-a-request" title="Permanent link">¶</a></h2>
 <p>Submitting a request requires you to start a session and submit both, a Technical Drawing (as bytes) and a list of hooks</p>
 <div class="codehilite"><pre><span></span><code>drawing_path = ...
@@ -407,7 +407,7 @@ It has three "Sublclients" that deal with the different kind of endpoints.</p>
 <p>Please talk to us before you start implementing a client in a different language. We are happy to perform peer reviews and would love to make the client available to other customers.</p>
 </div>
 <h3 id="authentication-client">Authentication Client<a class="headerlink" href="#authentication-client" title="Permanent link">¶</a></h3>
-<p>The Authentication Client allows you to obtain a JWT Token from AWS Cognito (see <a href="/docs/basics/authentication">Basics/Authentication</a>). This Token needs to be added to each HTTPS and WSS request as <code>Authorization: Bearer ...</code> .
+<p>The Authentication Client allows you to obtain a JWT Token from AWS Cognito (see <a href="./basics/authentication">Basics/Authentication</a>). This Token needs to be added to each HTTPS and WSS request as <code>Authorization: Bearer ...</code> .
 Obtaining the Token is straight-foward, mainly because frameworks for many languages exist. See <a href="https://github.com/werk24/werk24/blob/master/werk24/auth_client.py">Github/werk24/werk24-python/auth_client.py</a> for a python-based reference implementation.</p>
 <h3 id="techread-https-client">Techread HTTPS Client<a class="headerlink" href="#techread-https-client" title="Permanent link">¶</a></h3>
 <p>The Techread HTTPS Client is used to</p>

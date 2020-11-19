@@ -7,19 +7,19 @@
 
 ### W24SizeNominal
 
-| PAYLOAD DICT      |                                                      | Example                                       |
+| PAYLOAD DICT      |                                                      | EXAMPLE                                      |
 | ------------------| -----------------------------------------------------|---------------------------------------------- |
-| blurb             | `str` -- String representation of the item for human consumption    | 2.5                            |
-| size_type         | `W24SizeType` -- SizeType for deserialization.       | W24SizeType.NOMINAL                           |
-| nominal_size      | `float` -- Nominal size.                             | 2.5                           |
+| blurb<br/>(`str`)             |  String representation of the item for human consumption    | 2.5                            |
+| size_type <br/>(`W24SizeType`)   | SizeType for deserialization.       | W24SizeType.NOMINAL                           |
+| nominal_size <br/>(`float`)     | Nominal size.                             | 2.5                           |
 
 ### W24SizeDiameter
 
-| PAYLOAD DICT      |                                                      | Example                                       |
+| PAYLOAD DICT      |                                                      | EXAMPLE                                      |
 | ------------------| -----------------------------------------------------|---------------------------------------------- |
-| blurb             | `str` -- String representation of the item for human consumption    | Ø2.5                            |
-| size_type         | `W24SizeType` -- SizeType for deserialization.       | W24SizeType.DIAMETER                           |
-| nominal_size      | `float` -- Nominal size.                             | 2.5                           |
+| blurb <br/>(`str`)              | String representation of the item for human consumption    | Ø2.5                            |
+| size_type <br/>(`W24SizeType`)  | SizeType for deserialization.       | W24SizeType.DIAMETER                           |
+| nominal_size <br/>(`float`)     | Nominal size.                             | 2.5                           |
 
 ### W24SizeWidthAcrossFlats
 
@@ -27,10 +27,10 @@ Widths accross flats are typically annotated with a leading 'SW' (example SW11) 
 
 ![](./size_widths_across_flats.png)
 
-| PAYLOAD DICT      |                                                      | Example                                       |
+| PAYLOAD DICT      |                                                      | EXAMPLE                                      |
 | ------------------| -----------------------------------------------------|---------------------------------------------- |
-| blurb             | `str` -- String representation of the item for human consumption    | SW11                            |
-| size_type         | `W24SizeType` -- SizeType for deserialization.       | W24SizeType.DIAMETER                           |
-| nominal_size      | `float` -- Nominal size.                             | 12.7 / 11                                      |
-| width_accross_flats | `float` -- Size accross flats or Wrench sizes.     | 11                                            |
+| blurb <br/>(`str`)              | String representation of the item for human consumption    | SW11                            |
+| size_type  <br/>(`W24SizeType`)         | SizeType for deserialization.       | W24SizeType.DIAMETER                           |
+| nominal_size  <br/>(`float`)      | Nominal size.                             | 12.7 / 11                                      |
+| width_accross_flats <br/>(`float`)  | Size accross flats or Wrench sizes.     | 11                                            |
 

@@ -11,9 +11,9 @@ The Werk24 API uses three simple concepts
 In order for us to process the file, you need to send it to our API in binary format. You just need to provide us with the binary version of the file and let us worry about the rest.
 
 
-![](./getting_started/supported_formats.png)
+![](./supported_formats.png)
 
-See [API/Drawing Bytes](./api/drawing_bytes) for the list of supported file formats.
+See [API/Drawing Bytes](../api/drawing_bytes.md) for the list of supported file formats.
 
 ## Asks
 
@@ -22,7 +22,7 @@ Asks are your way of telling us what you want to know about the Engineering Draw
 !!! Example
     All asks that start with the prefix AskPage... concern the details of the Page. For single-page formats, such as PNG or JPEG, the Page object describes the complete picture, just how you submitted it. In multi-page file formats, requesting a AskPage... will yield a result for each Page in the Document.
 
-The following Ask Prefixes exist: [AskPage](ask/ask_page), [AskSheet](ask/ask_sheet), [AskCanvas](ask/ask_canvas), [AskSectional](ask/ask_sectional), and [AskVariant](ask/ask_variant).
+The following Ask Prefixes exist: `AskPage`, `AskSheet`, `AskCanvas`, `AskSectional`, and `AskVariant`.
 
 ## Hooks
 

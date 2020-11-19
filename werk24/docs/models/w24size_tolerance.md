@@ -3,29 +3,29 @@
 ### W24SizeToleranceFitsizeISO
 Fitsize tolerances following the DIN EN ISO 286-1 system. 
 
-| PAYLOAD DICT      |                                                      | Example                                       |
+| PAYLOAD DICT      |                                                      | EXAMPLE                                      |
 | ------------------| -----------------------------------------------------|---------------------------------------------- |
-| blurb             | `str` -- String representation of the item for human consumption    | k7                            |
-| toleration_type   | `W24SizeToleranceType` -- W24SizeToleranceType for deserialization  | `W24SizeToleranceType.FIT_SIZE_ISO`                           |
+| blurb             | `str` <br/><br/> String representation of the item for human consumption    | k7                            |
+| toleration_type   | `W24SizeToleranceType` <br/><br/> W24SizeToleranceType for deserialization  | `W24SizeToleranceType.FIT_SIZE_ISO`                           |
 
 ### W24SizeToleranceOffSize
 
-| PAYLOAD DICT      |                                                      | Example                                       |
+| PAYLOAD DICT      |                                                      | EXAMPLE                                      |
 | ------------------| -----------------------------------------------------|---------------------------------------------- |
-| blurb             | `str` -- String representation of the item for human consumption    | 0.5/-0.2                            |
-| toleration_type   | `W24SizeToleranceType` -- W24SizeToleranceType for deserialization  | `W24SizeToleranceType.OFF_SIZE`                           |
-| deviation_lower   | `float` -- Lower deviation from the nominal size  | 0.5                           |
-| deviation_upper   | `float` -- Upper deviation from the nominal size  | -0.2                           |
+| blurb             | `str` <br/><br/> String representation of the item for human consumption    | 0.5/-0.2                            |
+| toleration_type   | `W24SizeToleranceType` <br/><br/> W24SizeToleranceType for deserialization  | `W24SizeToleranceType.OFF_SIZE`                           |
+| deviation_lower   | `float` <br/><br/> Lower deviation from the nominal size  | 0.5                           |
+| deviation_upper   | `float` <br/><br/> Upper deviation from the nominal size  | -0.2                           |
 
 
 ### W24SizeToleranceGeneral
 Indicates that the General Tolerances apply. The General Tolerances are typically defined on the Title Block. 
 At this stage, we do not extract the information from the title block. If this is relevant to you, let us know.
 
-| PAYLOAD DICT      |                                                      | Example                                       |
+| PAYLOAD DICT      |                                                      | EXAMPLE                                      |
 | ------------------| -----------------------------------------------------|---------------------------------------------- |
-| blurb             | `str` -- String representation of the item for human consumption    | 0.5/-0.2                            |
-| toleration_type   | `W24SizeToleranceType` -- W24SizeToleranceType for deserialization  | `W24SizeToleranceType.OFF_SIZE`                           |
+| blurb             | `str` <br/><br/> String representation of the item for human consumption    | 0.5/-0.2                            |
+| toleration_type   | `W24SizeToleranceType` <br/><br/> W24SizeToleranceType for deserialization  | `W24SizeToleranceType.OFF_SIZE`                           |
 
 
 ### W24SizeToleranceTheoreticallyExact
@@ -50,9 +50,9 @@ Example:
 In these situations the toleration takes priority.
 
 
-| PAYLOAD DICT      |                                                      | Example                                       |
+| PAYLOAD DICT      |                                                      | EXAMPLE                                      |
 | ------------------| -----------------------------------------------------|---------------------------------------------- |
-| toleration_type   | `W24SizeToleranceType` -- W24SizeToleranceType for deserialization  | `W24SizeToleranceType.THEORETICALLY_EXACT`                           |
+| toleration_type   | `W24SizeToleranceType` <br/><br/> W24SizeToleranceType for deserialization  | `W24SizeToleranceType.THEORETICALLY_EXACT`                           |
 
 
 
@@ -67,9 +67,9 @@ Example:
 In this case we will return a W24SizeToleranceMinimum.
 
 
-| PAYLOAD DICT      |                                                      | Example                                       |
+| PAYLOAD DICT      |                                                      | EXAMPLE                                      |
 | ------------------| -----------------------------------------------------|---------------------------------------------- |
-| toleration_type   | `W24SizeToleranceType` -- W24SizeToleranceType for deserialization  | `W24SizeToleranceType.MINIMUM`                           |
+| toleration_type   | `W24SizeToleranceType` <br/><br/> W24SizeToleranceType for deserialization  | `W24SizeToleranceType.MINIMUM`                           |
 
 ### W24SizeToleranceMaximum
 Some drawings indiate a maximal length for some measures. 
@@ -82,9 +82,9 @@ Example:
 In this case we will return a W24SizeToleranceMaximum.
 
 
-| PAYLOAD DICT      |                                                      | Example                                       |
+| PAYLOAD DICT      |                                                      | EXAMPLE                                      |
 | ------------------| -----------------------------------------------------|---------------------------------------------- |
-| toleration_type   | `W24SizeToleranceType` -- W24SizeToleranceType for deserialization  | `W24SizeToleranceType.MAXIMUM`                           |
+| toleration_type   | `W24SizeToleranceType` <br/><br/> W24SizeToleranceType for deserialization  | `W24SizeToleranceType.MAXIMUM`                           |
 
 
 ### W24SizeToleranceApproximation
@@ -98,6 +98,6 @@ Example:
 In this case we will return a W24SizeToleranceApproximation.
 
 
-| PAYLOAD DICT      |                                                      | Example                                       |
+| PAYLOAD DICT      |                                                      | EXAMPLE                                      |
 | ------------------| -----------------------------------------------------|---------------------------------------------- |
-| toleration_type   | `W24SizeToleranceType` -- W24SizeToleranceType for deserialization  | `W24SizeToleranceType.APPROXIMATION`                           |
+| toleration_type   | `W24SizeToleranceType` <br/><br/> W24SizeToleranceType for deserialization  | `W24SizeToleranceType.APPROXIMATION`                           |
