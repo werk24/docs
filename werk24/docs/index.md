@@ -2,7 +2,7 @@
 Welcome to the Werk24 documentation! The following pages give you an overview on how to use our Technical Drawing Reading Services.
 
 Our Cloud service allows you to extract structured JSON data from Technical Drawings in unstructured File Formats
-like PDF, PNG, JPEG, TIFF, DXF and others.
+like PDF, PNG, JPEG, TIFF and others.
 
 ![](./images/welcome_banner.png)
 

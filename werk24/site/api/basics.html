@@ -1,0 +1,435 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Extracting Information from Technical Drawings and Engineering Drawings made simple." name="description"/>
+<link href="https://werk24.io/docs/api/basics.html" rel="canonical"/>
+<meta content="Dr. Jochen Mattes" name="author"/>
+<link href="../assets/images/favicon.png" rel="shortcut icon"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-6.1.5" name="generator"/>
+<title>Basics - Werk24 - Documentation</title>
+<link href="../assets/stylesheets/main.21aed14c.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.196e0c26.min.css" rel="stylesheet"/>
+<meta content="#000000" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+<link href="../extra.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="blue" data-md-color-primary="black" data-md-color-scheme="" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#api">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header-nav md-grid">
+<a aria-label="Werk24 - Documentation" class="md-header-nav__button md-logo" href="https://werk24.io/docs/" title="Werk24 - Documentation">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"></path></svg>
+</a>
+<label class="md-header-nav__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header-nav__title" data-md-component="header-title">
+<div class="md-header-nav__ellipsis">
+<span class="md-header-nav__topic md-ellipsis">
+            Werk24 - Documentation
+          </span>
+<span class="md-header-nav__topic md-ellipsis">
+            
+              Basics
+            
+          </span>
+</div>
+</div>
+<label class="md-header-nav__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" data-md-component="search-reset" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Werk24 - Documentation" class="md-nav__button md-logo" href="https://werk24.io/docs/" title="Werk24 - Documentation">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"></path></svg>
+</a>
+    Werk24 - Documentation
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" id="nav-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-1">
+      GETTING STARTED
+      <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="GETTING STARTED" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-1">
+<span class="md-nav__icon md-icon"></span>
+        GETTING STARTED
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../index.html">
+      Welcome
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../getting_started/basic_concepts.html">
+      Basic Concepts
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" id="nav-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-2">
+      TUTORIALS
+      <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="TUTORIALS" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-2">
+<span class="md-nav__icon md-icon"></span>
+        TUTORIALS
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tutorials/thumbnails.html">
+      Thumbnails
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-3">
+      ASKS
+      <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ASKS" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-3">
+<span class="md-nav__icon md-icon"></span>
+        ASKS
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../asks/basics.html">
+      Basics
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../asks/page_thumbnail.html">
+      Page / Thumbnail
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../asks/sheet_thumbnail.html">
+      Sheet / Thumbnail
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../asks/canvas_thumbnail.html">
+      Canvas / Thumbnail
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../asks/variant_measures.html">
+      Variant / Measures
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-4">
+      MODELS
+      <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="MODELS" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-4">
+<span class="md-nav__icon md-icon"></span>
+        MODELS
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../models/w24chamfer.html">
+      W24Chamfer
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../models/w24measure.html">
+      W24Measure
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../models/w24measure_label.html">
+      W24MeasureLabel
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../models/w24size.html">
+      W24Size
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../models/w24size_tolerance.html">
+      W24SizeTolerance
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../models/w24thread.html">
+      W24Thread
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" id="nav-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-5">
+      CLI
+      <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="CLI" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-5">
+<span class="md-nav__icon md-icon"></span>
+        CLI
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cli/basic.html">
+      Basic
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cli/techread.html">
+      Techread
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#communication-flow">
+    Communication Flow
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rational">
+    Rational
+  </a>
+<nav aria-label="Rational" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-continuous-information-flow">
+    1. Continuous Information Flow
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-continuous-extendability">
+    2. Continuous Extendability
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#clients">
+    Clients
+  </a>
+<nav aria-label="Clients" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-python-client">
+    The Python Client
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<p><link href="/mermaid.css" rel="stylesheet" type="text/css"/></p>
+<script src="https://unpkg.com/mermaid@8.4.8/dist/mermaid.min.js"></script>
+<script>
+mermaid.initialize({startOnLoad:true}); 
+mermaid.sequenceConfig = {
+
+    diagramMarginX:50,
+    diagramMarginY:10,
+    boxTextMargin:5,
+    noteMargin:10,
+    messageMargin:35,
+    mirrorActors:true
+
+}; 
+</script>
+<h1 id="api">API<a class="headerlink" href="#api" title="Permanent link">¶</a></h1>
+<p>We have opted to use a combination of an HTTPS and Websockets Connection to allow the client to sit behind a firewall without the ability to provide a publicly available callback URL -&gt; websockets</p>
+<p>The API is has three components that interact with each other:</p>
+<ol>
+<li>Authentication Client</li>
+<li>Techread HTTPS Client</li>
+<li>Techread Secure Websockets Client</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you need the ability to submit a techread request, but have no access to websockets (e.g., because your programming language does not provide easy access), let us know and we will provide a HTTPS-only API endpoint.</p>
+</div>
+<h2 id="communication-flow">Communication Flow<a class="headerlink" href="#communication-flow" title="Permanent link">¶</a></h2>
+<p>To make things a bit clearer, have a quick look at the sequence diagram below that describes a communication flow in which you are asking the W24 Techread API for two things:</p>
+<ol>
+<li>W24AskPageThumbnail: A Thumbnail of the Page</li>
+<li>W24AskVariantOverallDimensions: the overall dimensions of all the variants described on the page.</li>
+</ol>
+<div class="mermaid">
+sequenceDiagram
+
+    participant You
+    participant W24 Https
+    participant W24 Websocket
+    participant AWS Cognito
+
+    rect rgb(200,200,200)
+
+    Note over You, W24 Https: Authenticate
+    You-&gt;&gt;AWS Cognito: Authenticate
+    AWS Cognito --&gt;&gt;You: Token
+    end
+
+    rect rgb(200,200,200)
+
+    Note over You, W24 Https: Initiate Request with 2 Asks: <br/>-&gt; W24AskPageThumbnail, <br/> -&gt; W24AskVariantOverallDimensions
+    You-&gt;&gt;W24 Websocket: Initiate Request with Asks
+    W24 Websocket --&gt;&gt;You: RequestId
+
+    You-&gt;&gt;W24 Https: Upload Drawing
+    You-&gt;&gt;W24 Websocket: Start Read Process
+    end
+
+    rect rgb(200,200,200)
+
+    Note over You, W24 Https: Response for <br/>  W24AskPageThumbnail
+    W24 Websocket --&gt;&gt;You: Response
+    You -&gt;&gt; W24 Https: Request `payload_url` 
+    W24 Https --&gt;&gt; You: Thumbnail as PNG
+    end
+
+    rect rgb(200,200,200)
+
+    Note over You, W24 Https: Response for <br/> W24AskVariantOverallDimensions
+    W24 Websocket --&gt;&gt;You: Response
+    end
+
+</div>
+<h2 id="rational">Rational<a class="headerlink" href="#rational" title="Permanent link">¶</a></h2>
+<p>We have decided to use this (rather unusual) format for two main reasons:</p>
+<h3 id="1-continuous-information-flow">1. Continuous Information Flow<a class="headerlink" href="#1-continuous-information-flow" title="Permanent link">¶</a></h3>
+<p>We want to ensure that you can consume the information whenever it becomes available. So rather than waiting for the complete process to complete (which can take up to 1 minute), you can quickly get the information you need.</p>
+<h3 id="2-continuous-extendability">2. Continuous Extendability<a class="headerlink" href="#2-continuous-extendability" title="Permanent link">¶</a></h3>
+<p>We are constantly learning new things about your use cases and the particularities of the Technical Drawings that you submit (thank you oil and gas... we are having a lot of fun reading about your fanzy standards). This makes it important for us to quickly and easily extend the API capabilities without the need to maintain "legacy APIs". The chosen form allows us to continuously extend the functionality of the API while maintaining backwards-compatability.</p>
+<p>An easy example are the units in W24AskVariantOverallDimensions. Currently we quote the measures "as-is" from the Technical Drawing. So, if you submit two otherwise identical drawings, but change the units in one from Milimeter to Inches, you will currently receive the same response. This is clearly not desired and will be improved in the future. When we do, we'll add an attribute to the W24AskVariantOverallDimensions that allows you to choose the behaviour. By default it will mimick the old behaviour.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>We urge you to follow the Best Practices on Integration Testing.
+Check this <a href="https://techbeacon.com/devops/6-best-practices-integration-testing-continuous-integration">Article</a> for example.</p>
+</div>
+<h2 id="clients">Clients<a class="headerlink" href="#clients" title="Permanent link">¶</a></h2>
+<h3 id="the-python-client">The Python Client<a class="headerlink" href="#the-python-client" title="Permanent link">¶</a></h3>
+<p>To make your life as developer as easy as possible, we have implemented a reference client in python.
+See <a href="../api/techread-client">API/TechreadClient</a> for details.</p>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+<div class="md-footer-copyright__highlight">
+            Copyright © 2020 Werk24
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="../assets/javascripts/vendor.7e0ee788.min.js"></script>
+<script src="../assets/javascripts/bundle.b3a72adc.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+<script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+<script src="https://unpkg.com/mermaid@8.4.8/dist/mermaid.core.js"></script>
+<script src="../matomoto.js"></script>
+<script>mermaid.initialize({});</script></body>
+</html>

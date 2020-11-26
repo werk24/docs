@@ -3,9 +3,9 @@
 
 If a W24Page contains a Technical Drawing, it will be classified as W24Sheet. The Sheet corresponds to the content of the main frame on the Page. If the page does not contain such a frame, the complete Page is interpreted as Sheet.
 
-The Sheet Thumbnail will differs from the original Document in serveral ways:
+The Sheet Thumbnail will differ from the original Document in serveral ways:
 
-1. It is _converted to grayscale_, i.e, no matter how colorful the original drawing was, you will always receive a grayscale image in response. Please let us know if you need to have the colorized image; we are happy to add a parameter to the Ask.
+1. It is _converted to grayscale_, i.e, no matter how colorful the original drawing was, you will always receive a grayscale image in response. 
 2. It is _denoised_, i.e, various kinds of noise will have been removed
 3. It is _uprighted_, i.e., rotated in the way a human intelligence would
 

@@ -1,59 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
-     <loc>None</loc>
-     <lastmod>2020-11-19</lastmod>
+     <loc>https://werk24.io/docs/index.html</loc>
+     <lastmod>2020-11-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>None</loc>
-     <lastmod>2020-11-19</lastmod>
+     <loc>https://werk24.io/docs/getting_started/basic_concepts.html</loc>
+     <lastmod>2020-11-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>None</loc>
-     <lastmod>2020-11-19</lastmod>
+     <loc>https://werk24.io/docs/tutorials/thumbnails.html</loc>
+     <lastmod>2020-11-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>None</loc>
-     <lastmod>2020-11-19</lastmod>
+     <loc>https://werk24.io/docs/asks/basics.html</loc>
+     <lastmod>2020-11-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>None</loc>
-     <lastmod>2020-11-19</lastmod>
+     <loc>https://werk24.io/docs/asks/page_thumbnail.html</loc>
+     <lastmod>2020-11-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>None</loc>
-     <lastmod>2020-11-19</lastmod>
+     <loc>https://werk24.io/docs/asks/sheet_thumbnail.html</loc>
+     <lastmod>2020-11-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>None</loc>
-     <lastmod>2020-11-19</lastmod>
+     <loc>https://werk24.io/docs/asks/canvas_thumbnail.html</loc>
+     <lastmod>2020-11-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>None</loc>
-     <lastmod>2020-11-19</lastmod>
+     <loc>https://werk24.io/docs/asks/variant_measures.html</loc>
+     <lastmod>2020-11-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>None</loc>
-     <lastmod>2020-11-19</lastmod>
+     <loc>https://werk24.io/docs/models/w24chamfer.html</loc>
+     <lastmod>2020-11-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>None</loc>
-     <lastmod>2020-11-19</lastmod>
+     <loc>https://werk24.io/docs/models/w24measure.html</loc>
+     <lastmod>2020-11-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>None</loc>
-     <lastmod>2020-11-19</lastmod>
+     <loc>https://werk24.io/docs/models/w24measure_label.html</loc>
+     <lastmod>2020-11-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>None</loc>
-     <lastmod>2020-11-19</lastmod>
+     <loc>https://werk24.io/docs/models/w24size.html</loc>
+     <lastmod>2020-11-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>None</loc>
-     <lastmod>2020-11-19</lastmod>
+     <loc>https://werk24.io/docs/models/w24size_tolerance.html</loc>
+     <lastmod>2020-11-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>None</loc>
-     <lastmod>2020-11-19</lastmod>
+     <loc>https://werk24.io/docs/models/w24thread.html</loc>
+     <lastmod>2020-11-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://werk24.io/docs/cli/basic.html</loc>
+     <lastmod>2020-11-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://werk24.io/docs/cli/techread.html</loc>
+     <lastmod>2020-11-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>

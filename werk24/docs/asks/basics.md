@@ -3,7 +3,6 @@
 <script>
 mermaid.initialize({startOnLoad:true}); 
 mermaid.sequenceConfig = {
-
     diagramMarginX:50,
     diagramMarginY:10,
     boxTextMargin:5,
@@ -14,9 +13,14 @@ mermaid.sequenceConfig = {
 };
 </script>
 
-# Asks
+# Asks / Features
 
-Asks are your way to tell the Werk24 Techread API what information you would like to learn about the Technical Drawing. We have decided to use this format, as it allows you to specify exactly what you would like to learn about the drawing, and can serve your customer as soon as possible. Time is of the essence!
+**Asks** are your way to tell the Werk24 Techread API what **Features** you would like to learn about the Engineering Drawing. 
+You can submit multiple asks at the same time and through the Websocket connection you will receive the responses whenever the associated data is available.
+So you don't have to wait until your complete request is completed, but can directly show your user a thumbnail (available typically in 200ms), while we are extracting the measures (typically 5-30sec, depending on the file size)
+
+
+
 
 The intend of this page is to give you a brief overview over the available Ask Types. Please refer to the API reference for a full description.
 

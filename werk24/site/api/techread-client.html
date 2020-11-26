@@ -1,0 +1,471 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Extracting Information from Technical Drawings and Engineering Drawings made simple." name="description"/>
+<link href="https://werk24.io/docs/api/techread-client.html" rel="canonical"/>
+<meta content="Dr. Jochen Mattes" name="author"/>
+<link href="../assets/images/favicon.png" rel="shortcut icon"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-6.1.5" name="generator"/>
+<title>TechreadClient - Werk24 - Documentation</title>
+<link href="../assets/stylesheets/main.21aed14c.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.196e0c26.min.css" rel="stylesheet"/>
+<meta content="#000000" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+<link href="../extra.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="blue" data-md-color-primary="black" data-md-color-scheme="" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#techreadclient">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header-nav md-grid">
+<a aria-label="Werk24 - Documentation" class="md-header-nav__button md-logo" href="https://werk24.io/docs/" title="Werk24 - Documentation">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"></path></svg>
+</a>
+<label class="md-header-nav__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header-nav__title" data-md-component="header-title">
+<div class="md-header-nav__ellipsis">
+<span class="md-header-nav__topic md-ellipsis">
+            Werk24 - Documentation
+          </span>
+<span class="md-header-nav__topic md-ellipsis">
+            
+              TechreadClient
+            
+          </span>
+</div>
+</div>
+<label class="md-header-nav__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" data-md-component="search-reset" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Werk24 - Documentation" class="md-nav__button md-logo" href="https://werk24.io/docs/" title="Werk24 - Documentation">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"></path></svg>
+</a>
+    Werk24 - Documentation
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" id="nav-1" type="checkbox"/>
+<label class="md-nav__link" for="nav-1">
+      GETTING STARTED
+      <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="GETTING STARTED" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-1">
+<span class="md-nav__icon md-icon"></span>
+        GETTING STARTED
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../index.html">
+      Welcome
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../getting_started/basic_concepts.html">
+      Basic Concepts
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" id="nav-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-2">
+      TUTORIALS
+      <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="TUTORIALS" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-2">
+<span class="md-nav__icon md-icon"></span>
+        TUTORIALS
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tutorials/thumbnails.html">
+      Thumbnails
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-3">
+      ASKS
+      <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ASKS" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-3">
+<span class="md-nav__icon md-icon"></span>
+        ASKS
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../asks/basics.html">
+      Basics
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../asks/page_thumbnail.html">
+      Page / Thumbnail
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../asks/sheet_thumbnail.html">
+      Sheet / Thumbnail
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../asks/canvas_thumbnail.html">
+      Canvas / Thumbnail
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../asks/variant_measures.html">
+      Variant / Measures
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-4">
+      MODELS
+      <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="MODELS" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-4">
+<span class="md-nav__icon md-icon"></span>
+        MODELS
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../models/w24chamfer.html">
+      W24Chamfer
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../models/w24measure.html">
+      W24Measure
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../models/w24measure_label.html">
+      W24MeasureLabel
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../models/w24size.html">
+      W24Size
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../models/w24size_tolerance.html">
+      W24SizeTolerance
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../models/w24thread.html">
+      W24Thread
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" id="nav-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-5">
+      CLI
+      <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="CLI" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-5">
+<span class="md-nav__icon md-icon"></span>
+        CLI
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cli/basic.html">
+      Basic
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cli/techread.html">
+      Techread
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#initiating-the-client">
+    Initiating the Client
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-ask-concept">
+    The Ask Concept
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#defining-hooks">
+    Defining Hooks
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#submitting-a-request">
+    Submitting a Request
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#full-example">
+    Full Example
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#further-pointers">
+    Further Pointers
+  </a>
+<nav aria-label="Further Pointers" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#authentication-client">
+    Authentication Client
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#techread-https-client">
+    Techread HTTPS Client
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#techread-wss-client">
+    Techread WSS Client
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<h1 id="techreadclient">TechreadClient<a class="headerlink" href="#techreadclient" title="Permanent link">¶</a></h1>
+<p>The Techread Client is a python-based reference implementation to illustrate the communication with the werk24 API. It is actively maintained and will be the lead-implementation for all our development efforts.</p>
+<h2 id="initiating-the-client">Initiating the Client<a class="headerlink" href="#initiating-the-client" title="Permanent link">¶</a></h2>
+<p>You can make a new Techread client in two lines of code.</p>
+<div class="codehilite"><pre><span></span><code>from werk24 import W24TechreadClient
+client = W24TechreadClient.make_from_env()
+</code></pre></div>
+<p>This will create a new client from the environment variables. The client will look for the credentials in the <code>.werk24</code> file in your working directory. If the file cannot be found, the Client falls back to the information it can obtain from the <code>ENVIRONMENT VARIABLES</code> .</p>
+<h2 id="the-ask-concept">The Ask Concept<a class="headerlink" href="#the-ask-concept" title="Permanent link">¶</a></h2>
+<p>We understand that the individual use-cases can vary largely. Take these two extremes:</p>
+<ol>
+<li>Application 1 runs a batch job to obtain thumbnails of the main sectional on a Technical Drawing.</li>
+<li>Application 2 wants to derive the minimal tolerances on an A0 Technical drawing to inform the live-pricing engine. The user remains online and wants to be entertained while she is waiting for the price assessment.</li>
+</ol>
+<p>To serve both applications with the same API, we have introduced the concept "Ask", which allows you to define very precicely what you want to learn about the Technical Drawing. Each "Ask" then triggers a response as soon as the information becomes available.</p>
+<p>To come back to our application:</p>
+<ol>
+<li>
+<p>Applciation 1 would submit only one Ask:</p>
+<ul>
+<li>W24AskSectionalThumbnail()</li>
+</ul>
+</li>
+<li>
+<p>Application 2 would submit multiple Asks</p>
+<ul>
+<li>W24AskSheetThumbnail() -- gives the user an overview over the complete sheet</li>
+<li>W24AskSectionalThumbail() -- shows to the user that the individual sectionals have been separated correctly</li>
+<li>W24AskVariantMeasures() -- delivers the complete information about the Measures (incl. tolerances)</li>
+</ul>
+</li>
+</ol>
+<p>See <a href="../api/asks">API/Asks</a> for details.</p>
+<h2 id="defining-hooks">Defining Hooks<a class="headerlink" href="#defining-hooks" title="Permanent link">¶</a></h2>
+<p>To make your life as developer as easy as possible, we introduced a small <code>Hook</code> object that allows you to define</p>
+<ol>
+<li>The Ask, and</li>
+<li>What function should be called when the Ask is answered</li>
+</ol>
+<p>The defintion is very simple:</p>
+<div class="codehilite"><pre><span></span><code>from werk24 import Hook,W24AskVariantMeasures
+hooks = [Hook(ask=W24AskVariantMeasures(), function=print)]
+</code></pre></div>
+<p>For a full list of available asks, refer to <a href="../api/asks">API/Asks</a></p>
+<h2 id="submitting-a-request">Submitting a Request<a class="headerlink" href="#submitting-a-request" title="Permanent link">¶</a></h2>
+<p>Submitting a request requires you to start a session and submit both, a Technical Drawing (as bytes) and a list of hooks</p>
+<div class="codehilite"><pre><span></span><code>drawing_path = ...
+drawing_bytes = open(drawing_path, "rb").read()
+
+async with client as session
+    session.read_drawing_with_hooks(
+        drawing_bytes,
+        hooks)
+</code></pre></div>
+<p>!!! important Be sure to call the sniplet asyncinously (see Full Example)</p>
+<h2 id="full-example">Full Example<a class="headerlink" href="#full-example" title="Permanent link">¶</a></h2>
+<p>Combining all parts from above, we arrive at the full example. When you call the script with the path to a Technical Drawing as first argument, you should shortly after see the measures that were detected on the
+Drawing. Be aware that the API will return a response for each sectional that was found on the Canvas.
+If your Document contains 2 Pages with 2 Sectionals each, you will receive 4 responses.</p>
+<div class="codehilite"><pre><span></span><code>import asyncio
+import sys
+from dotenv import load_dotenv
+from werk24 import W24TechreadClient, W24AskVariantMeasures, Hook
+
+load_dotenv('.werk24')
+
+async def main(drawing_path:str) -&gt; None:
+
+    # define the hooks
+    hooks = [Hook(ask=W24AskVariantMeasures(), function=print)]
+
+    # make the session and start the reading process
+    client = W24TechreadClient.make_from_env()
+    async with client as session:
+        await session.read_drawing_with_hooks(drawing_bytes, hooks)
+
+if __name__ == "__main__":
+    try:
+        drawing_path = sys.argv[1]
+
+        # get the drawing
+        with open(drawing_path, "rb") as drawing_handle:
+            drawing_bytes = drawing_handle.read()
+    except FileNotFoundError:
+        sys.exit("File not found")
+
+    except KeyError:
+        sys.exit("Drawing Path Required as first argument")
+
+asyncio.run(main(drawing_path))
+</code></pre></div>
+<h2 id="further-pointers">Further Pointers<a class="headerlink" href="#further-pointers" title="Permanent link">¶</a></h2>
+<p>In case you plan to implement your own client, have a look at the structure of the Python client.
+It has three "Sublclients" that deal with the different kind of endpoints.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Please talk to us before you start implementing a client in a different language. We are happy to perform peer reviews and would love to make the client available to other customers.</p>
+</div>
+<h3 id="authentication-client">Authentication Client<a class="headerlink" href="#authentication-client" title="Permanent link">¶</a></h3>
+<p>The Authentication Client allows you to obtain a JWT Token from AWS Cognito (see <a href="./basics/authentication">Basics/Authentication</a>). This Token needs to be added to each HTTPS and WSS request as <code>Authorization: Bearer ...</code> .
+Obtaining the Token is straight-foward, mainly because frameworks for many languages exist. See <a href="https://github.com/werk24/werk24/blob/master/werk24/auth_client.py">Github/werk24/werk24-python/auth_client.py</a> for a python-based reference implementation.</p>
+<h3 id="techread-https-client">Techread HTTPS Client<a class="headerlink" href="#techread-https-client" title="Permanent link">¶</a></h3>
+<p>The Techread HTTPS Client is used to</p>
+<ol>
+<li>Upload Technical Drawings</li>
+<li>Upload Models</li>
+<li>Download binary Ask Responses</li>
+</ol>
+<h3 id="techread-wss-client">Techread WSS Client<a class="headerlink" href="#techread-wss-client" title="Permanent link">¶</a></h3>
+<p>The Techread WSS Client is used to:</p>
+<ol>
+<li>Initiate a Request</li>
+<li>Listen to Responses in "near-real-time"</li>
+</ol>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+<div class="md-footer-copyright__highlight">
+            Copyright © 2020 Werk24
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="../assets/javascripts/vendor.7e0ee788.min.js"></script>
+<script src="../assets/javascripts/bundle.b3a72adc.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+<script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+<script src="https://unpkg.com/mermaid@8.4.8/dist/mermaid.core.js"></script>
+<script src="../matomoto.js"></script>
+</body>
+</html>

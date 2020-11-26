@@ -1,8 +1,11 @@
 site_name: "Werk24 - Documentation"
 site_description: "Extracting Information from Technical Drawings and Engineering Drawings made simple."
 site_author: "Dr. Jochen Mattes"
+site_url: https://werk24.io/docs/
 
 copyright: "Copyright &copy; 2020 Werk24"
+
+use_directory_urls: false
 
 nav:
   - GETTING STARTED:
@@ -12,15 +15,30 @@ nav:
   - TUTORIALS:
       - Thumbnails: tutorials/thumbnails.md
 
-  - ASKS:
-      - Basics: asks/basics.md
+  - FEATURES / ASKS:
+      - Overview: asks/basics.md
       - Page / Thumbnail: asks/page_thumbnail.md
       - Sheet / Thumbnail: asks/sheet_thumbnail.md
       - Canvas / Thumbnail: asks/canvas_thumbnail.md
       - Variant / Measures: asks/variant_measures.md
+      - Variant / GD&Ts: asks/variant_gdts.md
 
   - MODELS:
       - W24Chamfer: models/w24chamfer.md
+      - W24GDT: models/w24gdt.md
+      - W24GDTCharacteristic: models/w24gdt_characteristic.md
+      - W24GDTDatum: models/w24gdt_datum.md
+      - W24GDTFeatureAssociated: models/w24gdt_feature_associated.md
+      - W24GDTFeatureDerived: models/w24gdt_feature_derived.md
+      - W24GDTFrame: models/w24gdt_frame.md
+      - W24GDTMaterialCondition: models/w24gdt_material_condition.md
+      - W24GDTReferenceAssociation: models/w24gdt_reference_association.md
+      - W24GDTState: models/w24gdt_state.md
+      - W24GDTZoneCombination: models/w24gdt_zone_combination.md
+      - W24GDTZoneConstraint: models/w24gdt_zone_constraint.md
+      - W24GDTZoneOffset: models/w24gdt_zone_offset.md
+      - W24GDTZoneShape: models/w24gdt_zone_shape.md
+      - W24GDTZone: models/w24gdt_zone_value.md
       - W24Measure: models/w24measure.md
       - W24MeasureLabel: models/w24measure_label.md
       - W24Size: models/w24size.md

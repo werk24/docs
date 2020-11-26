@@ -5,7 +5,12 @@ Each sheet may describe one or more Variants, depending on the precense of a W24
 
 ### W24AskVariantMeasures
 
-W24AskVariantMeasures return a list of all measures that we were able to detect on the Technical Drawing. The API will return one response for every variant-sectional. When you process the response, you need to be aware that 
+W24AskVariantMeasures return a list of all measures that we were able to detect on the Technical Drawing. 
+Please refer to the [W24MeasureLabel](../models/w24measure_label.md) model to learn how to access the [Thread](../models/w24thread.md), [Tolerance](../models/w24size_tolerance.md), and [Chamfer](../models/w24chamfer.md) information.
+
+
+The API will return one response for every variant-sectional. 
+When you process the response, you need to be aware that 
 
 * each document can have multiple pages,
 * each page can have multiple sheets,
@@ -13,7 +18,7 @@ W24AskVariantMeasures return a list of all measures that we were able to detect 
 * each canvas can have multiple variants, and
 * each variant can have multiple sectionals 
 
-As result, you will `#Pages x #Sheets x #Canvases x #Variants x #Sectionals` responses to your ask.
+As result, you will `#Pages x #Sheets x #Canvases x #Variants x #Sectionals` responses to your ask. 
 
 
 
@@ -26,4 +31,5 @@ As result, you will `#Pages x #Sheets x #Canvases x #Variants x #Sectionals` res
 | variant_id <br/>(`UUID4`) |Unqiue `UUID` that identifies the variant     |  "2680c8ca-6c74-4665-b293-02552d4f00a5       |
 | sectional_id <br/>(`UUID4`) |Unqiue `UUID` that identifies the sectional     |  "7c02d5cf-2939-443f-a399-2d8ea2fffaa3"       |
 | measures <br/>(`List[W24Measure]`)     | List of all the Measures that were detected on the Sectional | See [Models/W24Measure](../models/w24measure.md) |
+
 
