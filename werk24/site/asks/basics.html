@@ -10,7 +10,7 @@
 <meta content="Dr. Jochen Mattes" name="author"/>
 <link href="../assets/images/favicon.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.1.2, mkdocs-material-6.1.5" name="generator"/>
-<title>Basics - Werk24 - Documentation</title>
+<title>Overview - Werk24 - Documentation</title>
 <link href="../assets/stylesheets/main.21aed14c.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.196e0c26.min.css" rel="stylesheet"/>
 <meta content="#000000" name="theme-color"/>
@@ -24,7 +24,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#asks">
+<a class="md-skip" href="#asks-features">
           Skip to content
         </a>
 </div>
@@ -45,7 +45,7 @@
           </span>
 <span class="md-header-nav__topic md-ellipsis">
             
-              Basics
+              Overview
             
           </span>
 </div>
@@ -142,19 +142,19 @@
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
 <label class="md-nav__link" for="nav-3">
-      ASKS
+      FEATURES / ASKS
       <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-label="ASKS" class="md-nav" data-md-level="1">
+<nav aria-label="FEATURES / ASKS" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="nav-3">
 <span class="md-nav__icon md-icon"></span>
-        ASKS
+        FEATURES / ASKS
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
 <a class="md-nav__link md-nav__link--active" href="basics.html">
-      Basics
+      Overview
     </a>
 </li>
 <li class="md-nav__item">
@@ -177,6 +177,11 @@
       Variant / Measures
     </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="variant_gdts.html">
+      Variant / GD&amp;Ts
+    </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -195,6 +200,76 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../models/w24chamfer.html">
       W24Chamfer
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../models/w24gdt.html">
+      W24GDT
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../models/w24gdt_characteristic.html">
+      W24GDTCharacteristic
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../models/w24gdt_datum.html">
+      W24GDTDatum
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../models/w24gdt_feature_associated.html">
+      W24GDTFeatureAssociated
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../models/w24gdt_feature_derived.html">
+      W24GDTFeatureDerived
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../models/w24gdt_frame.html">
+      W24GDTFrame
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../models/w24gdt_material_condition.html">
+      W24GDTMaterialCondition
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../models/w24gdt_reference_association.html">
+      W24GDTReferenceAssociation
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../models/w24gdt_state.html">
+      W24GDTState
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../models/w24gdt_zone_combination.html">
+      W24GDTZoneCombination
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../models/w24gdt_zone_constraint.html">
+      W24GDTZoneConstraint
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../models/w24gdt_zone_offset.html">
+      W24GDTZoneOffset
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../models/w24gdt_zone_shape.html">
+      W24GDTZoneShape
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../models/w24gdt_zone_value.html">
+      W24GDTZone
     </a>
 </li>
 <li class="md-nav__item">
@@ -270,7 +345,6 @@
 <script>
 mermaid.initialize({startOnLoad:true}); 
 mermaid.sequenceConfig = {
-
     diagramMarginX:50,
     diagramMarginY:10,
     boxTextMargin:5,
@@ -280,8 +354,10 @@ mermaid.sequenceConfig = {
 
 };
 </script>
-<h1 id="asks">Asks<a class="headerlink" href="#asks" title="Permanent link">¶</a></h1>
-<p>Asks are your way to tell the Werk24 Techread API what information you would like to learn about the Technical Drawing. We have decided to use this format, as it allows you to specify exactly what you would like to learn about the drawing, and can serve your customer as soon as possible. Time is of the essence!</p>
+<h1 id="asks-features">Asks / Features<a class="headerlink" href="#asks-features" title="Permanent link">¶</a></h1>
+<p><strong>Asks</strong> are your way to tell the Werk24 Techread API what <strong>Features</strong> you would like to learn about the Engineering Drawing. 
+You can submit multiple asks at the same time and through the Websocket connection you will receive the responses whenever the associated data is available.
+So you don't have to wait until your complete request is completed, but can directly show your user a thumbnail (available typically in 200ms), while we are extracting the measures (typically 5-30sec, depending on the file size)</p>
 <p>The intend of this page is to give you a brief overview over the available Ask Types. Please refer to the API reference for a full description.</p>
 <div class="mermaid">
 graph TD

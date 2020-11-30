@@ -1,4 +1,10 @@
+## Introduction
+The MeasureLabel is a Werk24-internal data model that structures all data that a draftman might annotate on a measure. As you would expect, the [Size](../models/w24size.md) describes the size of the norm geometry. Be aware that there are multiple ways of describing the size (e.g. in millimeter, inch, width accross flats etc.). The [Tolerance](../models/w24size_tolerance.md) describes how much the work piece can differ from the nominal geometry, withouth compromising the work piece's functionality. In addition there are attributes for the [Chamfer](../models/w24chamfer.md), the quantity and the [Thread](../models/w24thread.md).
 
+<img src="./W24MeasureLabel.png">
+
+
+## Data Model
 | PAYLOAD DICT      |                                                      | EXAMPLE                                      |
 | ------------------| -----------------------------------------------------|---------------------------------------------- |
 | blurb<br/>(`str`) | String representation of the item for human consumption    | 17k6                             |

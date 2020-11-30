@@ -9,6 +9,9 @@ W24AskVariantMeasures return a list of all measures that we were able to detect 
 Please refer to the [W24MeasureLabel](../models/w24measure_label.md) model to learn how to access the [Thread](../models/w24thread.md), [Tolerance](../models/w24size_tolerance.md), and [Chamfer](../models/w24chamfer.md) information.
 
 
+### Number of responses        
+
+
 The API will return one response for every variant-sectional. 
 When you process the response, you need to be aware that 
 
